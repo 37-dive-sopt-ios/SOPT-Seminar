@@ -13,7 +13,9 @@
 		04A1DBB56A3863828A3D7F2B /* Seminar02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC0AE117B3C805E35768963 /* Seminar02.framework */; };
 		0F3EBD548A92D7401B1FC633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057A3CD8D734F9C1B4948C18 /* LaunchScreen.storyboard */; };
 		1C045CAFA93445F405BB8554 /* Seminar03.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04449B8B4B2AA39E1843EB6B /* Seminar03.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2E743A6F76CCB6064D781210 /* TuistAssets+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D529DAAF6A9D59C44D9D68 /* TuistAssets+App.swift */; };
 		4612E34176975FF239FDBB2E /* Seminar02.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDC0AE117B3C805E35768963 /* Seminar02.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48469C5111BF762561C9B9B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F7F83A194E1D17030DCA033 /* Assets.xcassets */; };
 		9E6569B360C5040FD4C8A7FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED69542D699D2104EE8BFC4 /* SceneDelegate.swift */; };
 		AAB073F1221B89F1B9D0816C /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 514C6A786251DDEC6B3DFF77 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B847C664149F1687F204B1DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE48B94517C4F8C2B9AC74C4 /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 		514C6A786251DDEC6B3DFF77 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		571E08A9083FD4334E4B7D06 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7210F22777D23AD1713BCADE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F7F83A194E1D17030DCA033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95D529DAAF6A9D59C44D9D68 /* TuistAssets+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+App.swift"; sourceTree = "<group>"; };
 		B715763AF72472036FF151A1 /* Seminar01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Seminar01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC0AE117B3C805E35768963 /* Seminar02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Seminar02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE48B94517C4F8C2B9AC74C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 		62EFB15EC88C1D2636544B42 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8F7F83A194E1D17030DCA033 /* Assets.xcassets */,
 				057A3CD8D734F9C1B4948C18 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -115,6 +120,7 @@
 		8919B428B639C6AF4BBFE002 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				95D529DAAF6A9D59C44D9D68 /* TuistAssets+App.swift */,
 				083CD4D343ECF7F321C1905D /* TuistBundle+App.swift */,
 			);
 			path = Sources;
@@ -197,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48469C5111BF762561C9B9B6 /* Assets.xcassets in Resources */,
 				0F3EBD548A92D7401B1FC633 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E743A6F76CCB6064D781210 /* TuistAssets+App.swift in Sources */,
 				FE078F42728C23B77EE02A1B /* TuistBundle+App.swift in Sources */,
 				004FD1E183A2F52A4913C9DB /* AppDelegate.swift in Sources */,
 				9E6569B360C5040FD4C8A7FA /* SceneDelegate.swift in Sources */,
