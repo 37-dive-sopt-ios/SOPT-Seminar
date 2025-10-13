@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:App/App.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Core/Core.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Seminar01/Seminar01.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Seminar02/Seminar02.xcodeproj">
+   </FileRef>
+</Workspace>

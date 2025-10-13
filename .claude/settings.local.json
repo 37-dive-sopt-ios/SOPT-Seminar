@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tuist edit:*)",
+      "Bash(tuist generate:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
