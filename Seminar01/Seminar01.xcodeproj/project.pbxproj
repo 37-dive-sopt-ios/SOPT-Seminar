@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		43A0B01FBA31F442562312C5 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F779C0EF1A9D58E8EF8EBF /* Core.framework */; };
+		6A19CF3132D9B147DE07CB49 /* TuistBundle+Seminar01.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3A6DF3CC4FA5DEE61E3E11 /* TuistBundle+Seminar01.swift */; };
+		90697FE15C5341AE0FCFDBF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F12EA85EEB75F9CBCD2F3325 /* Assets.xcassets */; };
 		A0A36453E13621D1FB91908F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0647A0D90545242A9CDBF1EC /* WelcomeViewController.swift */; };
 		C36EABE8CA9F271ACAC34CC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E560D29D9A332A30DA31F /* LoginViewController.swift */; };
+		FE9710D0B6DF6587CAA7708D /* TuistAssets+Seminar01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB14EACCE82FEFD6074680 /* TuistAssets+Seminar01.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +30,13 @@
 
 /* Begin PBXFileReference section */
 		0647A0D90545242A9CDBF1EC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		47FB14EACCE82FEFD6074680 /* TuistAssets+Seminar01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Seminar01.swift"; sourceTree = "<group>"; };
 		564BEF5C861572310A62BDB9 /* Seminar01-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Seminar01-Info.plist"; sourceTree = "<group>"; };
 		A7C3C49642171D3A0C2F1380 /* Seminar01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Seminar01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4E560D29D9A332A30DA31F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BE3A6DF3CC4FA5DEE61E3E11 /* TuistBundle+Seminar01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Seminar01.swift"; sourceTree = "<group>"; };
 		C3F779C0EF1A9D58E8EF8EBF /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12EA85EEB75F9CBCD2F3325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +64,18 @@
 			isa = PBXGroup;
 			children = (
 				B9AD10716DF5DC1F1D6A6A34 /* Derived */,
+				87C8ADA9516DCB4DD40AE424 /* Resources */,
 				05329B20BC9C1ED8096226F8 /* Sources */,
 			);
 			name = Project;
+			sourceTree = "<group>";
+		};
+		87C8ADA9516DCB4DD40AE424 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F12EA85EEB75F9CBCD2F3325 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		8D3A70EB54EAE0850367DF1A /* Products */ = {
@@ -72,10 +87,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		AB2D712AC587ED06EB87A0D8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				47FB14EACCE82FEFD6074680 /* TuistAssets+Seminar01.swift */,
+				BE3A6DF3CC4FA5DEE61E3E11 /* TuistBundle+Seminar01.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		B9AD10716DF5DC1F1D6A6A34 /* Derived */ = {
 			isa = PBXGroup;
 			children = (
 				DCCF1A1AD9C32BA316483DCB /* InfoPlists */,
+				AB2D712AC587ED06EB87A0D8 /* Sources */,
 			);
 			path = Derived;
 			sourceTree = "<group>";
@@ -152,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90697FE15C5341AE0FCFDBF1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +188,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE9710D0B6DF6587CAA7708D /* TuistAssets+Seminar01.swift in Sources */,
+				6A19CF3132D9B147DE07CB49 /* TuistBundle+Seminar01.swift in Sources */,
 				C36EABE8CA9F271ACAC34CC3 /* LoginViewController.swift in Sources */,
 				A0A36453E13621D1FB91908F /* WelcomeViewController.swift in Sources */,
 			);

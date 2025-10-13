@@ -60,6 +60,7 @@ extension Project {
                     bundleId: "com.th1ngjin.\(name)",
                     infoPlist: .default,
                     sources: ["Sources/**"],
+                    resources: ["Resources/**"],
                     dependencies: dependencies
                 )
             ]

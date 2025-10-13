@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		160AD9A85F8CA90CE2C023CE /* Seminar02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF69D8A076540FC56C2D3C /* Seminar02ViewController.swift */; };
+		2F6316D04D4FBED10F21D361 /* TuistBundle+Seminar02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46721CFCFD941174C7BAA1E1 /* TuistBundle+Seminar02.swift */; };
+		47ADF304F1740D44744F70D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E2DDE2C0AD09A0A33A958B1 /* Assets.xcassets */; };
+		5FEE6F5ED30F470826151215 /* TuistAssets+Seminar02.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D69C6465DE2F19AF64493 /* TuistAssets+Seminar02.swift */; };
 		9CF45D2C05B3A67145A2EE08 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AF1CC36614C0DE6F3E567A /* Core.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,9 +28,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E2DDE2C0AD09A0A33A958B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46721CFCFD941174C7BAA1E1 /* TuistBundle+Seminar02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Seminar02.swift"; sourceTree = "<group>"; };
 		98AF69D8A076540FC56C2D3C /* Seminar02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seminar02ViewController.swift; sourceTree = "<group>"; };
 		99FACC617BCB89B12327145C /* Seminar02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Seminar02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AF1CC36614C0DE6F3E567A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5D69C6465DE2F19AF64493 /* TuistAssets+Seminar02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Seminar02.swift"; sourceTree = "<group>"; };
 		F37209FB6B5357E73798CAA7 /* Seminar02-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Seminar02-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				318B2F3DB8E74ADE03AEE1A3 /* InfoPlists */,
+				46983B496C7A31192A564361 /* Sources */,
 			);
 			path = Derived;
 			sourceTree = "<group>";
@@ -57,6 +64,23 @@
 				F37209FB6B5357E73798CAA7 /* Seminar02-Info.plist */,
 			);
 			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		46983B496C7A31192A564361 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BA5D69C6465DE2F19AF64493 /* TuistAssets+Seminar02.swift */,
+				46721CFCFD941174C7BAA1E1 /* TuistBundle+Seminar02.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		572EAB36807F9F456695961B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1E2DDE2C0AD09A0A33A958B1 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		59258AD0C3D19AC973D3F6EA = {
@@ -88,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				25400EB8F70851BB7873815F /* Derived */,
+				572EAB36807F9F456695961B /* Resources */,
 				60BF075E3D280EF9C05E87CC /* Sources */,
 			);
 			name = Project;
@@ -149,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47ADF304F1740D44744F70D2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FEE6F5ED30F470826151215 /* TuistAssets+Seminar02.swift in Sources */,
+				2F6316D04D4FBED10F21D361 /* TuistBundle+Seminar02.swift in Sources */,
 				160AD9A85F8CA90CE2C023CE /* Seminar02ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
