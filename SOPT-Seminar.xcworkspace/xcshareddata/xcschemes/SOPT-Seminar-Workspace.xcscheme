@@ -62,6 +62,20 @@
                ReferencedContainer = "container:Seminar02/Seminar02.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6B065FE744FC61A010BFC801"
+               BuildableName = "Seminar03.framework"
+               BlueprintName = "Seminar03"
+               ReferencedContainer = "container:Seminar03/Seminar03.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

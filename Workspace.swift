@@ -6,6 +6,7 @@ let workspace = Workspace(
         "App",
         "Core",
         "Seminar01",
-        "Seminar02"
+        "Seminar02",
+        "Seminar03"
     ]
 )
