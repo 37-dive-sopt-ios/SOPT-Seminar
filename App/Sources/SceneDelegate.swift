@@ -30,7 +30,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(windowScene: windowScene)
 
-        // 전처리기를 통해 어떤 세미나를 실행할지 결정
         let rootViewController: UIViewController
 
         #if SEMINAR01
@@ -50,7 +49,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         #elseif SEMINAR08
         rootViewController = Seminar08ViewController()
         #else
-        rootViewController = UIViewController()
+        rootViewController = DefaultViewController()
         #endif
 
         window?.rootViewController = UINavigationController(rootViewController: rootViewController)

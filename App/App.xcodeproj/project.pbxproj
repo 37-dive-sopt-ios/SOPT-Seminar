@@ -18,7 +18,7 @@
 		48469C5111BF762561C9B9B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F7F83A194E1D17030DCA033 /* Assets.xcassets */; };
 		9E6569B360C5040FD4C8A7FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED69542D699D2104EE8BFC4 /* SceneDelegate.swift */; };
 		AAB073F1221B89F1B9D0816C /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 514C6A786251DDEC6B3DFF77 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B847C664149F1687F204B1DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE48B94517C4F8C2B9AC74C4 /* ViewController.swift */; };
+		B847C664149F1687F204B1DB /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE48B94517C4F8C2B9AC74C4 /* DefaultViewController.swift */; };
 		E32FFA13452CBAE81F3FDBFF /* Seminar03.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04449B8B4B2AA39E1843EB6B /* Seminar03.framework */; };
 		FE078F42728C23B77EE02A1B /* TuistBundle+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CD4D343ECF7F321C1905D /* TuistBundle+App.swift */; };
 		FEE46EC8B9E2BBC9C16F4684 /* Seminar01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B715763AF72472036FF151A1 /* Seminar01.framework */; };
@@ -54,7 +54,7 @@
 		95D529DAAF6A9D59C44D9D68 /* TuistAssets+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+App.swift"; sourceTree = "<group>"; };
 		B715763AF72472036FF151A1 /* Seminar01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Seminar01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC0AE117B3C805E35768963 /* Seminar02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Seminar02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE48B94517C4F8C2B9AC74C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE48B94517C4F8C2B9AC74C4 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 			children = (
 				7210F22777D23AD1713BCADE /* AppDelegate.swift */,
 				1ED69542D699D2104EE8BFC4 /* SceneDelegate.swift */,
-				EE48B94517C4F8C2B9AC74C4 /* ViewController.swift */,
+				EE48B94517C4F8C2B9AC74C4 /* DefaultViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 				FE078F42728C23B77EE02A1B /* TuistBundle+App.swift in Sources */,
 				004FD1E183A2F52A4913C9DB /* AppDelegate.swift in Sources */,
 				9E6569B360C5040FD4C8A7FA /* SceneDelegate.swift in Sources */,
-				B847C664149F1687F204B1DB /* ViewController.swift in Sources */,
+				B847C664149F1687F204B1DB /* DefaultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
