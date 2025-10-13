@@ -34,26 +34,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let rootViewController: UIViewController
 
         #if SEMINAR01
-        rootViewController = UINavigationController(rootViewController: LoginViewController())
+        rootViewController = LoginViewController()
         #elseif SEMINAR02
-        rootViewController = UINavigationController(rootViewController: Seminar02ViewController())
+        rootViewController = Seminar02ViewController()
         #elseif SEMINAR03
-        rootViewController = UINavigationController(rootViewController: Seminar03ViewController())
+        rootViewController = Seminar03ViewController()
         #elseif SEMINAR04
-        rootViewController = UINavigationController(rootViewController: Seminar04ViewController())
+        rootViewController = Seminar04ViewController()
         #elseif SEMINAR05
-        rootViewController = UINavigationController(rootViewController: Seminar05ViewController())
+        rootViewController = Seminar05ViewController()
         #elseif SEMINAR06
-        rootViewController = UINavigationController(rootViewController: Seminar06ViewController())
+        rootViewController = Seminar06ViewController()
         #elseif SEMINAR07
-        rootViewController = UINavigationController(rootViewController: Seminar07ViewController())
+        rootViewController = Seminar07ViewController()
         #elseif SEMINAR08
-        rootViewController = UINavigationController(rootViewController: Seminar08ViewController())
+        rootViewController = Seminar08ViewController()
         #else
-        rootViewController = UINavigationController(rootViewController: UIViewController())
+        rootViewController = UIViewController()
         #endif
 
-        window?.rootViewController = rootViewController
+        window?.rootViewController = UINavigationController(rootViewController: rootViewController)
         window?.makeKeyAndVisible()
     }
 }
