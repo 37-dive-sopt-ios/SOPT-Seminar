@@ -138,3 +138,11 @@ xcuserdata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,swift,swiftpackagemanager,xcode
+
+# Tuist
+Tuist/Derived/
+Tuist/Cache/
+Tuist/Dependencies/
+Tuist/Automation/Derived/
+Tuist/.build/
+*.tuist-cache
