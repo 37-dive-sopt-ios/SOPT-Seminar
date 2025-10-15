@@ -37,6 +37,7 @@ let project = Project(
                 configurations: [
                     .debug(name: .configuration("Seminar01"), settings: ["SWIFT_ACTIVE_COMPILATION_CONDITIONS": "SEMINAR01"]),
                     .debug(name: .configuration("Seminar02"), settings: ["SWIFT_ACTIVE_COMPILATION_CONDITIONS": "SEMINAR02"]),
+                    .debug(name: .configuration("Seminar02Closure"), settings: ["SWIFT_ACTIVE_COMPILATION_CONDITIONS": "SEMINAR02_CLOSURE"]),
                     .debug(name: .configuration("Seminar03"), settings: ["SWIFT_ACTIVE_COMPILATION_CONDITIONS": "SEMINAR03"]),
                     .debug(name: .configuration("Debug"), settings: [:]),
                     .release(name: .configuration("Release"), settings: [:])
@@ -47,7 +48,8 @@ let project = Project(
     schemes: [
         createSeminarScheme(number: 1),
         createSeminarScheme(number: 2),
-        createSeminarScheme(number: 3)
+        createSeminarScheme(number: 3),
+        createSeminarClosureScheme(number: 2)
     ]
 )
 
@@ -55,6 +57,20 @@ let project = Project(
 private func createSeminarScheme(number: Int) -> Scheme {
     let paddedNumber = number < 10 ? "0\(number)" : "\(number)"
     let seminarName = "Seminar\(paddedNumber)"
+    return .scheme(
+        name: seminarName,
+        shared: true,
+        buildAction: .buildAction(targets: ["App"]),
+        runAction: .runAction(
+            configuration: .configuration(seminarName),
+            executable: "App"
+        )
+    )
+}
+
+private func createSeminarClosureScheme(number: Int) -> Scheme {
+    let paddedNumber = number < 10 ? "0\(number)" : "\(number)"
+    let seminarName = "Seminar\(paddedNumber)Closure"
     return .scheme(
         name: seminarName,
         shared: true,

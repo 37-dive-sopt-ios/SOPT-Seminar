@@ -14,7 +14,7 @@ protocol WelcomeReloginDelegate: AnyObject {
 public final class WelcomeViewController_Delegate: UIViewController {
 
     var id: String?
-    
+
     weak var delegate: WelcomeReloginDelegate?
 
     private let logoImageView: UIImageView = {

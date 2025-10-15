@@ -4,6 +4,7 @@ import ProjectDescription
 public let sharedConfigurations: [Configuration] = [
     .debug(name: .configuration("Seminar01")),
     .debug(name: .configuration("Seminar02")),
+    .debug(name: .configuration("Seminar02Closure")),
     .debug(name: .configuration("Seminar03")),
     .debug(name: .configuration("Debug")),
     .release(name: .configuration("Release"))

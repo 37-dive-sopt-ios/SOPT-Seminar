@@ -4,6 +4,8 @@ import UIKit
 import Seminar01
 #elseif SEMINAR02
 import Seminar02
+#elseif SEMINAR02_CLOSURE
+import Seminar02
 #elseif SEMINAR03
 import Seminar03
 #elseif SEMINAR04
@@ -36,6 +38,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         rootViewController = LoginViewController()
         #elseif SEMINAR02
         rootViewController = LoginViewController_Delegate()
+        #elseif SEMINAR02_CLOSURE
+        rootViewController = LoginViewController_Closure()
         #elseif SEMINAR03
         rootViewController = Seminar03ViewController()
         #elseif SEMINAR04
