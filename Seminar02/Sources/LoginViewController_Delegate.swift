@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Core
 
 public final class LoginViewController_Delegate: UIViewController {
 
@@ -24,6 +25,7 @@ public final class LoginViewController_Delegate: UIViewController {
         textField.placeholder = "아이디를 입력해주세요"
         textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+        textField.addPadding()
         return textField
     }()
 
@@ -32,6 +34,7 @@ public final class LoginViewController_Delegate: UIViewController {
         textField.placeholder = "비밀번호를 입력해주세요"
         textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+        textField.addPadding()
         return textField
     }()
 
