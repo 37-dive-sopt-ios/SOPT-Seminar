@@ -77,12 +77,14 @@ public final class LoginViewController_Delegate: UIViewController {
         let welcomeViewController = WelcomeViewController_Delegate()
         welcomeViewController.modalPresentationStyle = .formSheet
         welcomeViewController.id = idTextField.text
+        welcomeViewController.delegate = self
         self.present(welcomeViewController, animated: true)
     }
 
     private func pushToWelcomeVC() {
         let welcomeViewController = WelcomeViewController_Delegate()
         welcomeViewController.id = idTextField.text
+        welcomeViewController.delegate = self
         self.navigationController?.pushViewController(welcomeViewController, animated: true)
     }
 
@@ -93,3 +95,11 @@ public final class LoginViewController_Delegate: UIViewController {
     }
 }
 
+extension LoginViewController_Delegate: WelcomeReloginDelegate {
+    public func retryLogin(_ viewController: UIViewController, didTapReloginWith message: String) {
+        titleLabel.text = message
+        idTextField.text = ""
+        passwordTextField.text = ""
+        loginButton.setTitle("다시 로그인하기", for: .normal)
+    }
+}

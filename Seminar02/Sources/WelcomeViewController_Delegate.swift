@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol WelcomeReloginDelegate: AnyObject {
+    func retryLogin(_ viewController: UIViewController, didTapReloginWith message: String)
+}
+
 public final class WelcomeViewController_Delegate: UIViewController {
 
     var id: String?
+    
+    weak var delegate: WelcomeReloginDelegate?
 
     private let logoImageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 112, y: 87, width: 150, height: 150))
@@ -26,12 +32,13 @@ public final class WelcomeViewController_Delegate: UIViewController {
         return label
     }()
 
-    private var goHomeButton: UIButton = {
+    private lazy var goHomeButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 20, y: 426, width: 335, height: 58))
         button.backgroundColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
         button.setTitle("메인으로", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
+        button.addTarget(self, action: #selector(backToLoginButtonDidTap_normal), for: .touchUpInside)
         return button
     }()
 
@@ -76,9 +83,18 @@ public final class WelcomeViewController_Delegate: UIViewController {
         guard let id = id else { return }
         self.welcomeLabel.text = "\(id)님 \n반가워요!"
     }
+    
+    @objc func backToLoginButtonDidTap_normal() {
+        if self.navigationController == nil {
+            self.dismiss(animated: true)
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
 
     @objc
     private func backToLoginButtonDidTap() {
+        delegate?.retryLogin(self, didTapReloginWith: "다시 로그인 버튼을 눌렀어요!")
         if self.navigationController == nil {
             self.dismiss(animated: true)
         } else {
@@ -86,4 +102,3 @@ public final class WelcomeViewController_Delegate: UIViewController {
         }
     }
 }
-
