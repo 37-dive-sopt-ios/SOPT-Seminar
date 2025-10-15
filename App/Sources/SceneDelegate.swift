@@ -35,7 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         #if SEMINAR01
         rootViewController = LoginViewController()
         #elseif SEMINAR02
-        rootViewController = Seminar02ViewController()
+        rootViewController = LoginViewController_Delegate()
         #elseif SEMINAR03
         rootViewController = Seminar03ViewController()
         #elseif SEMINAR04
