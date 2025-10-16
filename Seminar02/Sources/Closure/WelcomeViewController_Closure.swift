@@ -94,7 +94,9 @@ public final class WelcomeViewController_Closure: UIViewController {
     @objc
     private func backToLoginButtonDidTap() {
         let nickname = id ?? "알 수 없는 사용자"
+        
         notifyCompletion("\(nickname)님이 다시 로그인 버튼을 눌렀어요!")
+        
         if self.navigationController == nil {
             self.dismiss(animated: true)
         } else {

@@ -74,23 +74,22 @@ public final class LoginViewController_Closure: UIViewController {
     }
 
     private func presentToWelcomeVC() {
-        let welcomeViewController = makeWelcomeViewController()
-        welcomeViewController.modalPresentationStyle = .formSheet
-        self.present(welcomeViewController, animated: true)
-    }
-
-    private func pushToWelcomeVC() {
-        let welcomeViewController = makeWelcomeViewController()
-        self.navigationController?.pushViewController(welcomeViewController, animated: true)
-    }
-
-    private func makeWelcomeViewController() -> WelcomeViewController_Closure {
         let welcomeViewController = WelcomeViewController_Closure()
         welcomeViewController.id = idTextField.text
         welcomeViewController.completionHandler = { [weak self] message in
             self?.handleCompletion(message: message)
         }
-        return welcomeViewController
+        welcomeViewController.modalPresentationStyle = .formSheet
+        self.present(welcomeViewController, animated: true)
+    }
+
+    private func pushToWelcomeVC() {
+        let welcomeViewController = WelcomeViewController_Closure()
+        welcomeViewController.id = idTextField.text
+        welcomeViewController.completionHandler = { [weak self] message in
+            self?.handleCompletion(message: message)
+        }
+        self.navigationController?.pushViewController(welcomeViewController, animated: true)
     }
 
     private func handleCompletion(message: String) {

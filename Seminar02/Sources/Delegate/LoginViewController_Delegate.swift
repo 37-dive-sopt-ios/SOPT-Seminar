@@ -8,7 +8,7 @@
 import UIKit
 import Core
 
-public final class LoginViewController_Delegate: UIViewController {
+public final class LoginViewController_Delegate: UIViewController, WelcomeReloginDelegate {
 
     private let titleLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 69, y: 161, width: 236, height: 44))
@@ -93,9 +93,7 @@ public final class LoginViewController_Delegate: UIViewController {
         //        presentToWelcomeVC()
         pushToWelcomeVC()
     }
-}
-
-extension LoginViewController_Delegate: WelcomeReloginDelegate {
+    
     public func retryLogin(_ viewController: UIViewController, didTapReloginWith message: String) {
         titleLabel.text = message
         idTextField.text = ""
