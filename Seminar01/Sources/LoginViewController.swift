@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Core
 
 public final class LoginViewController: UIViewController {
 
@@ -65,9 +66,13 @@ public final class LoginViewController: UIViewController {
     }
 
     private func setLayout() {
-        [titleLabel, idTextField, passwordTextField, loginButton].forEach {
-            self.view.addSubview($0)
-        }
+        
+        self.view.addSubviews(
+            titleLabel,
+            idTextField,
+            passwordTextField,
+            loginButton
+        )
     }
 
     private func presentToWelcomeVC() {
