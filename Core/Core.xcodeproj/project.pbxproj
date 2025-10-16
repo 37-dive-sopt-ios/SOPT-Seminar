@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		23FC0A3FFD88FA3D7FF86CE5 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82F3CFD4FB158BBC026673D /* UITextField+.swift */; };
 		4CDA0FA96CC533CEE7BD9EAB /* TuistBundle+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA284D46F06DE7F69A1C1A /* TuistBundle+Core.swift */; };
 		56D9E9BB81B27479BAC30E27 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065F25FE2D4A82B35B0C83AE /* Core.swift */; };
+		71E9BBC12EA11650002EC191 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9BBC02EA11650002EC191 /* UIView+.swift */; };
 		A862B215981CE5D5BE27129B /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 9B921246ADA3EE4C494CEC9D /* .gitkeep */; };
 		CE509CB5E0098A61D2890A77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EDB7529BF1D393246B34539 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -33,8 +34,9 @@
 		0EDB7529BF1D393246B34539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26BDD2D3E7FED8CDE9A52F46 /* Core-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Core-Info.plist"; sourceTree = "<group>"; };
 		2B0FA7F85F3573FB522F9478 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71E9BBC02EA11650002EC191 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		7AA0261276659150B33CDA93 /* TuistAssets+Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Core.swift"; sourceTree = "<group>"; };
-		9B921246ADA3EE4C494CEC9D /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		9B921246ADA3EE4C494CEC9D /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		C0AA284D46F06DE7F69A1C1A /* TuistBundle+Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Core.swift"; sourceTree = "<group>"; };
 		F82F3CFD4FB158BBC026673D /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				F82F3CFD4FB158BBC026673D /* UITextField+.swift */,
+				71E9BBC02EA11650002EC191 /* UIView+.swift */,
 			);
 			path = "UIKit+";
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				4CDA0FA96CC533CEE7BD9EAB /* TuistBundle+Core.swift in Sources */,
 				56D9E9BB81B27479BAC30E27 /* Core.swift in Sources */,
 				23FC0A3FFD88FA3D7FF86CE5 /* UITextField+.swift in Sources */,
+				71E9BBC12EA11650002EC191 /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,10 +351,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -383,10 +384,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -419,10 +417,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -632,10 +627,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -727,10 +719,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
