@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,8 @@
 		47ADF304F1740D44744F70D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E2DDE2C0AD09A0A33A958B1 /* Assets.xcassets */; };
 		4BC1EA6D72D9B99C8540AAAF /* LoginViewController_Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279595BA7A25E03E4F55A3B4 /* LoginViewController_Delegate.swift */; };
 		5FEE6F5ED30F470826151215 /* TuistAssets+Seminar02.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D69C6465DE2F19AF64493 /* TuistAssets+Seminar02.swift */; };
+		714A21F52EA2C4C9004F90E6 /* LoginViewController_SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A21F42EA2C4C9004F90E6 /* LoginViewController_SnapKit.swift */; };
+		714A21F72EA2C4D3004F90E6 /* WelcomeViewController_SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A21F62EA2C4D3004F90E6 /* WelcomeViewController_SnapKit.swift */; };
 		9CF45D2C05B3A67145A2EE08 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AF1CC36614C0DE6F3E567A /* Core.framework */; };
 		A22726E8718DA381D15FFB91 /* LoginViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578687294A428ADDBE58B545 /* LoginViewController_Closure.swift */; };
 		DDB07606CC1BFE3DD9B89B66 /* WelcomeViewController_Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9AEBA1FAE1D43612467FD7 /* WelcomeViewController_Delegate.swift */; };
@@ -38,6 +40,8 @@
 		46721CFCFD941174C7BAA1E1 /* TuistBundle+Seminar02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Seminar02.swift"; sourceTree = "<group>"; };
 		578687294A428ADDBE58B545 /* LoginViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Closure.swift; sourceTree = "<group>"; };
 		5E9AEBA1FAE1D43612467FD7 /* WelcomeViewController_Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Delegate.swift; sourceTree = "<group>"; };
+		714A21F42EA2C4C9004F90E6 /* LoginViewController_SnapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_SnapKit.swift; sourceTree = "<group>"; };
+		714A21F62EA2C4D3004F90E6 /* WelcomeViewController_SnapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_SnapKit.swift; sourceTree = "<group>"; };
 		7FED4D9189412C04E7454019 /* protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
 		99FACC617BCB89B12327145C /* Seminar02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Seminar02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AF1CC36614C0DE6F3E567A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,11 +126,21 @@
 		60BF075E3D280EF9C05E87CC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				714A21F32EA2C4B9004F90E6 /* SnapKit */,
 				A839C2FAD4313ECF22B3D555 /* Closure */,
 				003E0D25673025AF0C019BCA /* Delegate */,
 				312BD09A5CB6E9432F2FDB92 /* Protocol */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		714A21F32EA2C4B9004F90E6 /* SnapKit */ = {
+			isa = PBXGroup;
+			children = (
+				714A21F42EA2C4C9004F90E6 /* LoginViewController_SnapKit.swift */,
+				714A21F62EA2C4D3004F90E6 /* WelcomeViewController_SnapKit.swift */,
+			);
+			path = SnapKit;
 			sourceTree = "<group>";
 		};
 		A839C2FAD4313ECF22B3D555 /* Closure */ = {
@@ -188,8 +202,6 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = DB849C52035D04DA741213BF /* Build configuration list for PBXProject "Seminar02" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -229,9 +241,11 @@
 				2F6316D04D4FBED10F21D361 /* TuistBundle+Seminar02.swift in Sources */,
 				A22726E8718DA381D15FFB91 /* LoginViewController_Closure.swift in Sources */,
 				2B5A69D63A71FD92C8B7C3EB /* WelcomeViewController_Closure.swift in Sources */,
+				714A21F72EA2C4D3004F90E6 /* WelcomeViewController_SnapKit.swift in Sources */,
 				4BC1EA6D72D9B99C8540AAAF /* LoginViewController_Delegate.swift in Sources */,
 				DDB07606CC1BFE3DD9B89B66 /* WelcomeViewController_Delegate.swift in Sources */,
 				EB88D04E5EAF375A994A14FD /* protocol.swift in Sources */,
+				714A21F52EA2C4C9004F90E6 /* LoginViewController_SnapKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +275,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -329,10 +340,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -483,10 +491,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -519,10 +524,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -614,10 +616,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
