@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		9CF45D2C05B3A67145A2EE08 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AF1CC36614C0DE6F3E567A /* Core.framework */; };
 		A22726E8718DA381D15FFB91 /* LoginViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578687294A428ADDBE58B545 /* LoginViewController_Closure.swift */; };
 		DDB07606CC1BFE3DD9B89B66 /* WelcomeViewController_Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9AEBA1FAE1D43612467FD7 /* WelcomeViewController_Delegate.swift */; };
+		EA3489256D64B9C593C11886 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED7620835852FF00EA1BE12B /* SnapKit.framework */; };
+		EB88D04E5EAF375A994A14FD /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FED4D9189412C04E7454019 /* protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,16 +38,14 @@
 		46721CFCFD941174C7BAA1E1 /* TuistBundle+Seminar02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Seminar02.swift"; sourceTree = "<group>"; };
 		578687294A428ADDBE58B545 /* LoginViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Closure.swift; sourceTree = "<group>"; };
 		5E9AEBA1FAE1D43612467FD7 /* WelcomeViewController_Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Delegate.swift; sourceTree = "<group>"; };
+		7FED4D9189412C04E7454019 /* protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
 		99FACC617BCB89B12327145C /* Seminar02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Seminar02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AF1CC36614C0DE6F3E567A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5D69C6465DE2F19AF64493 /* TuistAssets+Seminar02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Seminar02.swift"; sourceTree = "<group>"; };
+		ED7620835852FF00EA1BE12B /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37209FB6B5357E73798CAA7 /* Seminar02-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Seminar02-Info.plist"; sourceTree = "<group>"; };
 		F405A59D3D1252042E049B79 /* WelcomeViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Closure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		718A0DF92EA20748004AA1B5 /* Protocol */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Protocol; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C47D36A26DD553CF4D8BC1E9 /* Frameworks */ = {
@@ -53,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CF45D2C05B3A67145A2EE08 /* Core.framework in Frameworks */,
+				EA3489256D64B9C593C11886 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +76,14 @@
 				46983B496C7A31192A564361 /* Sources */,
 			);
 			path = Derived;
+			sourceTree = "<group>";
+		};
+		312BD09A5CB6E9432F2FDB92 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7FED4D9189412C04E7454019 /* protocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		318B2F3DB8E74ADE03AEE1A3 /* InfoPlists */ = {
@@ -105,17 +114,17 @@
 		59258AD0C3D19AC973D3F6EA = {
 			isa = PBXGroup;
 			children = (
-				D2657F028875964F9D290DA5 /* Project */,
 				CA965ABA6447B87B66502B5E /* Products */,
+				D2657F028875964F9D290DA5 /* Project */,
 			);
 			sourceTree = "<group>";
 		};
 		60BF075E3D280EF9C05E87CC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				718A0DF92EA20748004AA1B5 /* Protocol */,
 				A839C2FAD4313ECF22B3D555 /* Closure */,
 				003E0D25673025AF0C019BCA /* Delegate */,
+				312BD09A5CB6E9432F2FDB92 /* Protocol */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 			children = (
 				A0AF1CC36614C0DE6F3E567A /* Core.framework */,
 				99FACC617BCB89B12327145C /* Seminar02.framework */,
+				ED7620835852FF00EA1BE12B /* SnapKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,9 +174,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				718A0DF92EA20748004AA1B5 /* Protocol */,
-			);
 			name = Seminar02;
 			packageProductDependencies = (
 			);
@@ -181,6 +188,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = DB849C52035D04DA741213BF /* Build configuration list for PBXProject "Seminar02" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -222,6 +231,7 @@
 				2B5A69D63A71FD92C8B7C3EB /* WelcomeViewController_Closure.swift in Sources */,
 				4BC1EA6D72D9B99C8540AAAF /* LoginViewController_Delegate.swift in Sources */,
 				DDB07606CC1BFE3DD9B89B66 /* WelcomeViewController_Delegate.swift in Sources */,
+				EB88D04E5EAF375A994A14FD /* protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +261,10 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -285,7 +298,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -316,7 +329,10 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -467,7 +483,10 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -500,7 +519,10 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -592,7 +614,10 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;

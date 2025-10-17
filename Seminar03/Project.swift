@@ -4,6 +4,7 @@ import ProjectDescriptionHelpers
 let project = Project.framework(
     name: "Seminar03",
     dependencies: [
-        .project(target: "Core", path: "../Core")
+        .project(target: "Core", path: "../Core"),
+        .external(name: "SnapKit")
     ]
 )

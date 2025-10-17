@@ -3,14 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		323D2B28819C4C70EA97FC02 /* LoginViewController_AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4A49C08085CC0284878DE7 /* LoginViewController_AutoLayout.swift */; };
+		3C4E94D2B17E0E8B03DEC427 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8B2E37F36C0FF97BE9151E /* SnapKit.framework */; };
 		43A0B01FBA31F442562312C5 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F779C0EF1A9D58E8EF8EBF /* Core.framework */; };
 		6A19CF3132D9B147DE07CB49 /* TuistBundle+Seminar01.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3A6DF3CC4FA5DEE61E3E11 /* TuistBundle+Seminar01.swift */; };
 		90697FE15C5341AE0FCFDBF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F12EA85EEB75F9CBCD2F3325 /* Assets.xcassets */; };
 		A0A36453E13621D1FB91908F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0647A0D90545242A9CDBF1EC /* WelcomeViewController.swift */; };
+		A2EFEBBBFC7B3BEDE73FA63C /* WelcomeViewController_AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A1E025799CEF0F7CF61D26 /* WelcomeViewController_AutoLayout.swift */; };
 		C36EABE8CA9F271ACAC34CC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E560D29D9A332A30DA31F /* LoginViewController.swift */; };
 		FE9710D0B6DF6587CAA7708D /* TuistAssets+Seminar01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB14EACCE82FEFD6074680 /* TuistAssets+Seminar01.swift */; };
 /* End PBXBuildFile section */
@@ -32,16 +35,15 @@
 		0647A0D90545242A9CDBF1EC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		47FB14EACCE82FEFD6074680 /* TuistAssets+Seminar01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Seminar01.swift"; sourceTree = "<group>"; };
 		564BEF5C861572310A62BDB9 /* Seminar01-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Seminar01-Info.plist"; sourceTree = "<group>"; };
+		9E4A49C08085CC0284878DE7 /* LoginViewController_AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_AutoLayout.swift; sourceTree = "<group>"; };
 		A7C3C49642171D3A0C2F1380 /* Seminar01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Seminar01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8A1E025799CEF0F7CF61D26 /* WelcomeViewController_AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_AutoLayout.swift; sourceTree = "<group>"; };
 		BD4E560D29D9A332A30DA31F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BE3A6DF3CC4FA5DEE61E3E11 /* TuistBundle+Seminar01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Seminar01.swift"; sourceTree = "<group>"; };
 		C3F779C0EF1A9D58E8EF8EBF /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8B2E37F36C0FF97BE9151E /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12EA85EEB75F9CBCD2F3325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		7177DD8C2EA2AE9A0085DC37 /* AutoLayout */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AutoLayout; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		091690118BD7803E8E630C69 /* Frameworks */ = {
@@ -49,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43A0B01FBA31F442562312C5 /* Core.framework in Frameworks */,
+				3C4E94D2B17E0E8B03DEC427 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +61,7 @@
 		05329B20BC9C1ED8096226F8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				7177DD8C2EA2AE9A0085DC37 /* AutoLayout */,
+				7021AA1468E9A074FF09EB33 /* AutoLayout */,
 				BD4E560D29D9A332A30DA31F /* LoginViewController.swift */,
 				0647A0D90545242A9CDBF1EC /* WelcomeViewController.swift */,
 			);
@@ -75,6 +78,15 @@
 			name = Project;
 			sourceTree = "<group>";
 		};
+		7021AA1468E9A074FF09EB33 /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				9E4A49C08085CC0284878DE7 /* LoginViewController_AutoLayout.swift */,
+				A8A1E025799CEF0F7CF61D26 /* WelcomeViewController_AutoLayout.swift */,
+			);
+			path = AutoLayout;
+			sourceTree = "<group>";
+		};
 		87C8ADA9516DCB4DD40AE424 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +100,7 @@
 			children = (
 				C3F779C0EF1A9D58E8EF8EBF /* Core.framework */,
 				A7C3C49642171D3A0C2F1380 /* Seminar01.framework */,
+				EE8B2E37F36C0FF97BE9151E /* SnapKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,8 +126,8 @@
 		D31FA2DB296CD8206D30CD5E = {
 			isa = PBXGroup;
 			children = (
-				6E88EFD59CE6AF20EAA5ECF9 /* Project */,
 				8D3A70EB54EAE0850367DF1A /* Products */,
+				6E88EFD59CE6AF20EAA5ECF9 /* Project */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,9 +155,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				7177DD8C2EA2AE9A0085DC37 /* AutoLayout */,
-			);
 			name = Seminar01;
 			packageProductDependencies = (
 			);
@@ -159,6 +169,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 81D82AB1E090863B1C401FE5 /* Build configuration list for PBXProject "Seminar01" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -196,6 +208,8 @@
 			files = (
 				FE9710D0B6DF6587CAA7708D /* TuistAssets+Seminar01.swift in Sources */,
 				6A19CF3132D9B147DE07CB49 /* TuistBundle+Seminar01.swift in Sources */,
+				323D2B28819C4C70EA97FC02 /* LoginViewController_AutoLayout.swift in Sources */,
+				A2EFEBBBFC7B3BEDE73FA63C /* WelcomeViewController_AutoLayout.swift in Sources */,
 				C36EABE8CA9F271ACAC34CC3 /* LoginViewController.swift in Sources */,
 				A0A36453E13621D1FB91908F /* WelcomeViewController.swift in Sources */,
 			);
@@ -227,7 +241,10 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -378,7 +395,10 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -411,7 +431,10 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -556,7 +579,10 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -589,7 +615,10 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -623,7 +652,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

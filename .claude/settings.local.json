@@ -4,7 +4,10 @@
       "Bash(tuist edit:*)",
       "Bash(tuist generate:*)",
       "Bash(chmod:*)",
-      "Bash(swift:*)"
+      "Bash(swift:*)",
+      "Bash(tuist install:*)",
+      "Bash(brew list:*)",
+      "Bash(brew install:*)"
     ],
     "deny": [],
     "ask": []
