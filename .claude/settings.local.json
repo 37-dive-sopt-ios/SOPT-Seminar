@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(tuist edit:*)",
-      "Bash(tuist generate:*)"
+      "Bash(tuist generate:*)",
+      "Bash(chmod:*)",
+      "Bash(swift:*)"
     ],
     "deny": [],
     "ask": []

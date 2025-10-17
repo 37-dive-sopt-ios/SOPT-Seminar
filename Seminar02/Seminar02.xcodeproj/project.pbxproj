@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2B5A69D63A71FD92C8B7C3EB /* WelcomeViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A59D3D1252042E049B79 /* WelcomeViewController_Closure.swift */; };
-		2C7918DA506B512512209022 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 3612132CCBC558ED0E5F380C /* .gitkeep */; };
 		2F6316D04D4FBED10F21D361 /* TuistBundle+Seminar02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46721CFCFD941174C7BAA1E1 /* TuistBundle+Seminar02.swift */; };
 		47ADF304F1740D44744F70D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E2DDE2C0AD09A0A33A958B1 /* Assets.xcassets */; };
 		4BC1EA6D72D9B99C8540AAAF /* LoginViewController_Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279595BA7A25E03E4F55A3B4 /* LoginViewController_Delegate.swift */; };
@@ -34,7 +33,6 @@
 /* Begin PBXFileReference section */
 		1E2DDE2C0AD09A0A33A958B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		279595BA7A25E03E4F55A3B4 /* LoginViewController_Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Delegate.swift; sourceTree = "<group>"; };
-		3612132CCBC558ED0E5F380C /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		46721CFCFD941174C7BAA1E1 /* TuistBundle+Seminar02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Seminar02.swift"; sourceTree = "<group>"; };
 		578687294A428ADDBE58B545 /* LoginViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Closure.swift; sourceTree = "<group>"; };
 		5E9AEBA1FAE1D43612467FD7 /* WelcomeViewController_Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Delegate.swift; sourceTree = "<group>"; };
@@ -44,6 +42,10 @@
 		F37209FB6B5357E73798CAA7 /* Seminar02-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Seminar02-Info.plist"; sourceTree = "<group>"; };
 		F405A59D3D1252042E049B79 /* WelcomeViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Closure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		718A0DF92EA20748004AA1B5 /* Protocol */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Protocol; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C47D36A26DD553CF4D8BC1E9 /* Frameworks */ = {
@@ -95,7 +97,6 @@
 		572EAB36807F9F456695961B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3612132CCBC558ED0E5F380C /* .gitkeep */,
 				1E2DDE2C0AD09A0A33A958B1 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -112,6 +113,7 @@
 		60BF075E3D280EF9C05E87CC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				718A0DF92EA20748004AA1B5 /* Protocol */,
 				A839C2FAD4313ECF22B3D555 /* Closure */,
 				003E0D25673025AF0C019BCA /* Delegate */,
 			);
@@ -162,6 +164,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				718A0DF92EA20748004AA1B5 /* Protocol */,
+			);
 			name = Seminar02;
 			packageProductDependencies = (
 			);
@@ -200,7 +205,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C7918DA506B512512209022 /* .gitkeep in Resources */,
 				47ADF304F1740D44744F70D2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,10 +251,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -315,10 +316,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -469,10 +467,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -505,10 +500,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -600,10 +592,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
