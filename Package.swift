@@ -7,7 +7,17 @@ import PackageDescription
     let packageSettings = PackageSettings(
         productTypes: [
             "SnapKit": .framework
-        ]
+        ],
+        baseSettings: .settings(
+            configurations: [
+                .debug(name: "Seminar01"),
+                .debug(name: "Seminar02"),
+                .debug(name: "Seminar02Closure"),
+                .debug(name: "Seminar03"),
+                .debug(name: "Debug"),
+                .release(name: "Release")
+            ]
+        )
     )
 #endif
 
