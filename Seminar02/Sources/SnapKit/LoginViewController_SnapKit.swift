@@ -78,9 +78,8 @@ public final class LoginViewController_SnapKit: UIViewController {
 
         idTextField.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(titleLabel.snp.bottom).offset(71)
-            $0.leading.equalToSuperview().offset(20)
-            $0.trailing.equalToSuperview().offset(-20)
+        $0.top.equalTo(titleLabel.snp.bottom).offset(71)
+            $0.horizontalEdges.equalToSuperview().inset(20)
             $0.height.equalTo(52)
         }
 

@@ -8,12 +8,14 @@
 import UIKit
 
 protocol WelcomeReloginDelegate: AnyObject {
-    func retryLogin(_ viewController: UIViewController, didTapReloginWith message: String)
+    func retryLogin(didTapReloginWith message: String)
 }
 
 public final class WelcomeViewController_Delegate: UIViewController {
 
     var id: String?
+    
+    lazy var result: Int = sum(a: 1, b: 2)
 
     weak var delegate: WelcomeReloginDelegate?
 
@@ -78,6 +80,12 @@ public final class WelcomeViewController_Delegate: UIViewController {
             self.view.addSubview($0)
         }
     }
+    
+    private func sum(a: Int, b: Int) -> Int {
+        let a: Int = a
+        let b: Int = b
+        return a + b
+    }
 
     private func bindID() {
         guard let id = id else { return }
@@ -94,7 +102,8 @@ public final class WelcomeViewController_Delegate: UIViewController {
 
     @objc
     private func backToLoginButtonDidTap() {
-        delegate?.retryLogin(self, didTapReloginWith: "다시 로그인 버튼을 눌렀어요!")
+        delegate?.retryLogin(didTapReloginWith: "다시 로그인 버튼을 눌렀어요!")
+        
         if self.navigationController == nil {
             self.dismiss(animated: true)
         } else {

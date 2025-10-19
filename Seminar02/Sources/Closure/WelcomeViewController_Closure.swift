@@ -10,6 +10,7 @@ import UIKit
 public final class WelcomeViewController_Closure: UIViewController {
 
     var id: String?
+    
     var completionHandler: ((String) -> Void)?
 
     private let logoImageView: UIImageView = {
@@ -78,10 +79,6 @@ public final class WelcomeViewController_Closure: UIViewController {
         guard let id = id else { return }
         self.welcomeLabel.text = "\(id)님 \n반가워요!"
     }
-
-    private func notifyCompletion(_ message: String) {
-        completionHandler?(message)
-    }
     
     @objc private func backToLoginButtonDidTap_normal() {
         if self.navigationController == nil {
@@ -95,7 +92,7 @@ public final class WelcomeViewController_Closure: UIViewController {
     private func backToLoginButtonDidTap() {
         let nickname = id ?? "알 수 없는 사용자"
         
-        notifyCompletion("\(nickname)님이 다시 로그인 버튼을 눌렀어요!")
+        completionHandler?("\(nickname)님이 다시 로그인 버튼을 눌렀어요!")
         
         if self.navigationController == nil {
             self.dismiss(animated: true)

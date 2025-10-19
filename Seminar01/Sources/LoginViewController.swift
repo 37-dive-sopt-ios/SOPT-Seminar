@@ -11,7 +11,7 @@ import Core
 public final class LoginViewController: UIViewController {
 
     private let titleLabel: UILabel = {
-        let label = UILabel(frame: CGRect(x: 69, y: 161, width: 236, height: 44))
+        let label = UILabel()
         label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요."
         label.textColor = .black
         label.textAlignment = .center
@@ -21,15 +21,16 @@ public final class LoginViewController: UIViewController {
     }()
 
     private let idTextField: UITextField = {
-        let textField = UITextField(frame: CGRect(x: 20, y: 276, width: 335, height: 52))
+        let textField = UITextField()
         textField.placeholder = "아이디를 입력해주세요"
         textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+        textField.addPadding()
         return textField
     }()
 
     private let passwordTextField: UITextField = {
-        let textField = UITextField(frame: CGRect(x: 20, y: 335, width: 335, height: 52))
+        let textField = UITextField()
         textField.placeholder = "비밀번호를 입력해주세요"
         textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
@@ -37,7 +38,7 @@ public final class LoginViewController: UIViewController {
     }()
 
     private lazy var loginButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 21, y: 422, width: 332, height: 58))
+        let button = UIButton()
         button.backgroundColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
         button.setTitle("로그인하기", for: .normal)
         button.setTitleColor(.white, for: .normal)

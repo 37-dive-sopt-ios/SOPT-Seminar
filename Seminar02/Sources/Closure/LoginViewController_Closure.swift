@@ -77,7 +77,12 @@ public final class LoginViewController_Closure: UIViewController {
         let welcomeViewController = WelcomeViewController_Closure()
         welcomeViewController.id = idTextField.text
         welcomeViewController.completionHandler = { [weak self] message in
-            self?.handleCompletion(message: message)
+            guard let self = self else { return }
+            
+            self.titleLabel.text = message
+            self.idTextField.text = ""
+            self.passwordTextField.text = ""
+            loginButton.setTitle("다시 로그인하기", for: .normal)
         }
         welcomeViewController.modalPresentationStyle = .formSheet
         self.present(welcomeViewController, animated: true)
@@ -87,16 +92,15 @@ public final class LoginViewController_Closure: UIViewController {
         let welcomeViewController = WelcomeViewController_Closure()
         welcomeViewController.id = idTextField.text
         welcomeViewController.completionHandler = { [weak self] message in
-            self?.handleCompletion(message: message)
+            
+            guard let self = self else { return }
+            
+            self.titleLabel.text = message
+            self.idTextField.text = ""
+            self.passwordTextField.text = ""
+            loginButton.setTitle("다시 로그인하기", for: .normal)
         }
         self.navigationController?.pushViewController(welcomeViewController, animated: true)
-    }
-
-    private func handleCompletion(message: String) {
-        titleLabel.text = message
-        idTextField.text = ""
-        passwordTextField.text = ""
-        loginButton.setTitle("다시 로그인하기", for: .normal)
     }
 
     @objc
