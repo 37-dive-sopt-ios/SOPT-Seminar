@@ -14,6 +14,7 @@ import PackageDescription
                 .debug(name: "Seminar02"),
                 .debug(name: "Seminar02Closure"),
                 .debug(name: "Seminar03"),
+                .debug(name: "Seminar03MVC"),
                 .debug(name: "Debug"),
                 .release(name: "Release")
             ]

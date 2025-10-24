@@ -39,6 +39,7 @@ let project = Project(
                     .debug(name: .configuration("Seminar02"), settings: ["SWIFT_ACTIVE_COMPILATION_CONDITIONS": "SEMINAR02"]),
                     .debug(name: .configuration("Seminar02Closure"), settings: ["SWIFT_ACTIVE_COMPILATION_CONDITIONS": "SEMINAR02_CLOSURE"]),
                     .debug(name: .configuration("Seminar03"), settings: ["SWIFT_ACTIVE_COMPILATION_CONDITIONS": "SEMINAR03"]),
+                    .debug(name: .configuration("Seminar03MVC"), settings: ["SWIFT_ACTIVE_COMPILATION_CONDITIONS": "SEMINAR03_MVC"]),
                     .debug(name: .configuration("Debug"), settings: [:]),
                     .release(name: .configuration("Release"), settings: [:])
                 ]
@@ -49,7 +50,16 @@ let project = Project(
         createSeminarScheme(number: 1),
         createSeminarScheme(number: 2),
         createSeminarScheme(number: 3),
-        createSeminarClosureScheme(number: 2)
+        createSeminarClosureScheme(number: 2),
+        .scheme(
+            name: "Seminar03MVC",
+            shared: true,
+            buildAction: .buildAction(targets: ["App"]),
+            runAction: .runAction(
+                configuration: .configuration("Seminar03MVC"),
+                executable: "App"
+            )
+        )
     ]
 )
 
