@@ -5,9 +5,9 @@
 //  Created by 이명진 on 10/18/25.
 //
 
-import Foundation
-import SnapKit
 import UIKit
+
+import SnapKit
 
 class ScrollViewController: UIViewController {
     
