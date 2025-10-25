@@ -3,7 +3,7 @@ import ProjectDescriptionHelpers
 
 let project = Project(
     name: "App",
-    settings: .settings(configurations: sharedConfigurations),
+    settings: .settings(configurations: allConfigurations),
     targets: [
         .target(
             name: "App",
@@ -34,15 +34,7 @@ let project = Project(
             ],
             settings: .settings(
                 base: [:],
-                configurations: [
-                    .debug(name: .configuration("Seminar01"), settings: ["SWIFT_ACTIVE_COMPILATION_CONDITIONS": "SEMINAR01"]),
-                    .debug(name: .configuration("Seminar02"), settings: ["SWIFT_ACTIVE_COMPILATION_CONDITIONS": "SEMINAR02"]),
-                    .debug(name: .configuration("Seminar02Closure"), settings: ["SWIFT_ACTIVE_COMPILATION_CONDITIONS": "SEMINAR02_CLOSURE"]),
-                    .debug(name: .configuration("Seminar03"), settings: ["SWIFT_ACTIVE_COMPILATION_CONDITIONS": "SEMINAR03"]),
-                    .debug(name: .configuration("Seminar03MVC"), settings: ["SWIFT_ACTIVE_COMPILATION_CONDITIONS": "SEMINAR03_MVC"]),
-                    .debug(name: .configuration("Debug"), settings: [:]),
-                    .release(name: .configuration("Release"), settings: [:])
-                ]
+                configurations: allConfigurations
             )
         )
     ],

@@ -1,16 +1,5 @@
 import ProjectDescription
 
-// 공통 Configuration 정의
-public let sharedConfigurations: [Configuration] = [
-    .debug(name: .configuration("Seminar01")),
-    .debug(name: .configuration("Seminar02")),
-    .debug(name: .configuration("Seminar02Closure")),
-    .debug(name: .configuration("Seminar03")),
-    .debug(name: .configuration("Seminar03MVC")),
-    .debug(name: .configuration("Debug")),
-    .release(name: .configuration("Release"))
-]
-
 extension Project {
     public static func app(
         name: String,
@@ -18,7 +7,7 @@ extension Project {
     ) -> Project {
         return Project(
             name: name,
-            settings: .settings(configurations: sharedConfigurations),
+            settings: .settings(configurations: allConfigurations),
             targets: [
                 .target(
                     name: name,
@@ -53,7 +42,7 @@ extension Project {
     ) -> Project {
         return Project(
             name: name,
-            settings: .settings(configurations: sharedConfigurations),
+            settings: .settings(configurations: allConfigurations),
             targets: [
                 .target(
                     name: name,

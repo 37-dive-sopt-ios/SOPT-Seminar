@@ -8,7 +8,8 @@
       "Bash(tuist install:*)",
       "Bash(brew list:*)",
       "Bash(brew install:*)",
-      "Bash(xcodebuild:*)"
+      "Bash(xcodebuild:*)",
+      "Bash(tuist clean)"
     ],
     "deny": [],
     "ask": []

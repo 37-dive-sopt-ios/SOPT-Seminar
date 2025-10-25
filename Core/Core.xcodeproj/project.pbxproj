@@ -12,6 +12,7 @@
 		4CDA0FA96CC533CEE7BD9EAB /* TuistBundle+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA284D46F06DE7F69A1C1A /* TuistBundle+Core.swift */; };
 		56D9E9BB81B27479BAC30E27 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065F25FE2D4A82B35B0C83AE /* Core.swift */; };
 		9AC51DD6F07FA18F27753A5F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4537821D7BBA0A034DE2F /* UIView+.swift */; };
+		A862B215981CE5D5BE27129B /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 9B921246ADA3EE4C494CEC9D /* .gitkeep */; };
 		CE509CB5E0098A61D2890A77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EDB7529BF1D393246B34539 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		2B0FA7F85F3573FB522F9478 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E4537821D7BBA0A034DE2F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		7AA0261276659150B33CDA93 /* TuistAssets+Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Core.swift"; sourceTree = "<group>"; };
+		9B921246ADA3EE4C494CEC9D /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		C0AA284D46F06DE7F69A1C1A /* TuistBundle+Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Core.swift"; sourceTree = "<group>"; };
 		F82F3CFD4FB158BBC026673D /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +63,7 @@
 		398DDE8FB7FF757B796B9A2B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FDA578186F3AFC51EC7A6620 /* Fonts */,
 				0EDB7529BF1D393246B34539 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -128,6 +131,14 @@
 			path = Derived;
 			sourceTree = "<group>";
 		};
+		FDA578186F3AFC51EC7A6620 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9B921246ADA3EE4C494CEC9D /* .gitkeep */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,8 +169,6 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 4EBE82DE9849E8F47BAECD7B /* Build configuration list for PBXProject "Core" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -185,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE509CB5E0098A61D2890A77 /* Assets.xcassets in Resources */,
+				A862B215981CE5D5BE27129B /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +325,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SEMINAR02_CLOSURE;
 			};
 			name = Seminar02Closure;
 		};
@@ -518,6 +529,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SEMINAR01;
 			};
 			name = Seminar01;
 		};
@@ -577,6 +589,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SEMINAR03;
 			};
 			name = Seminar03;
 		};
@@ -731,6 +744,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SEMINAR03_MVC;
 			};
 			name = Seminar03MVC;
 		};
@@ -790,6 +804,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SEMINAR02;
 			};
 			name = Seminar02;
 		};
