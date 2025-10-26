@@ -83,7 +83,7 @@ final class LoginView: UIView {
 
         passwordTextField.snp.makeConstraints {
             $0.top.equalTo(idTextField.snp.bottom).offset(7)
-            $0.horizontalEdges.equalToSuperview().inset(20)
+            $0.horizontalEdges.equalTo(idTextField)
             $0.height.equalTo(52)
         }
 

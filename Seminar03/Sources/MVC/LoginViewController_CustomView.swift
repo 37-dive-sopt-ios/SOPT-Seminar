@@ -3,7 +3,7 @@ import Core
 
 // MARK: - ViewController
 /// View와 분리된 ViewController
-public final class LoginViewController_MVC: UIViewController {
+public final class LoginViewController_CustomView: UIViewController {
 
     // MARK: - Properties
     private let loginView = LoginView()
