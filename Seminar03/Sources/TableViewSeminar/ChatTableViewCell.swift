@@ -19,7 +19,7 @@ final class ChatTableViewCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 30
+        imageView.layer.cornerRadius = 20
         imageView.backgroundColor = .systemGray5
         return imageView
     }()
@@ -88,14 +88,14 @@ final class ChatTableViewCell: UITableViewCell {
 
     private func setLayout() {
         profileImageView.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(20)
+            $0.leading.equalToSuperview().inset(16)
             $0.centerY.equalToSuperview()
-            $0.size.equalTo(60)
+            $0.size.equalTo(40)
         }
 
         nameLabel.snp.makeConstraints {
-            $0.top.equalTo(profileImageView.snp.top).offset(4)
-            $0.leading.equalTo(profileImageView.snp.trailing).offset(12)
+            $0.top.equalTo(profileImageView.snp.top).offset(0.5)
+            $0.leading.equalTo(profileImageView.snp.trailing).offset(16)
         }
 
         statusLabel.snp.makeConstraints {
@@ -105,14 +105,14 @@ final class ChatTableViewCell: UITableViewCell {
 
         messageLabel.snp.makeConstraints {
             $0.top.equalTo(nameLabel.snp.bottom).offset(6)
-            $0.leading.equalTo(profileImageView.snp.trailing).offset(12)
+            $0.leading.equalTo(profileImageView.snp.trailing).offset(16)
             $0.trailing.equalTo(thumbnailImageView.snp.leading).offset(-8)
         }
 
         thumbnailImageView.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(20)
-            $0.bottom.equalTo(profileImageView.snp.bottom)
-            $0.size.equalTo(50)
+            $0.centerY.equalToSuperview()
+            $0.size.equalTo(40)
         }
     }
 
