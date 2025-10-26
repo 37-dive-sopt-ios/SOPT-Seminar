@@ -46,7 +46,8 @@ public final class ChatViewController: UIViewController { // -- 1번
         super.viewDidLoad()
         
         setUI()
-        setTableView()
+        register()
+        setDelegate()
         setLayout()
         loadMockData()
     }
@@ -56,14 +57,7 @@ public final class ChatViewController: UIViewController { // -- 1번
     private func setUI() {
         view.backgroundColor = .white
         title = "채팅"
-    }
-    
-    private func setTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(ChatTableViewCell.self, forCellReuseIdentifier: "ChatTableViewCell")
         tableView.separatorStyle = .singleLine
-        tableView.rowHeight = 80
     }
     
     private func setLayout() { // -- 3번
@@ -72,6 +66,15 @@ public final class ChatViewController: UIViewController { // -- 1번
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    private func register() {
+        tableView.register(ChatTableViewCell.self, forCellReuseIdentifier: ChatTableViewCell.identifier)
+    }
+    
+    private func setDelegate() {
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     // MARK: - Data
@@ -87,7 +90,7 @@ public final class ChatViewController: UIViewController { // -- 1번
             ),
             ChatRoom(
                 profileImage: UIImage(named: "profile2"),
-                name: "chan",
+                name: "안치욱",
                 statusMessage: "구의동",
                 lastMessage: "넵 수고하세용",
                 thumbnail: UIImage(named: "item2")
@@ -158,6 +161,10 @@ public final class ChatViewController: UIViewController { // -- 1번
 extension ChatViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(chatRooms[indexPath.row].name) 채팅방 선택됨")
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
     }
 }
 
