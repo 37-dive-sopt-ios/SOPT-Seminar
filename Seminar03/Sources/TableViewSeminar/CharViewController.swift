@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Core
 import SnapKit
 
 public struct ChatRoom {
@@ -78,74 +79,74 @@ public final class ChatViewController: UIViewController { // -- 1번
     private func loadMockData() {
         chatRooms = [
             ChatRoom(
-                profileImage: UIImage(systemName: "person.circle.fill"),
+                profileImage: UIImage(named: "profile1"),
                 name: "이명진",
                 statusMessage: "분정동",
                 lastMessage: "확인했습니다 감사합니다 :)",
-                thumbnail: UIImage(systemName: "photo")
+                thumbnail: UIImage(named: "item1")
             ),
             ChatRoom(
-                profileImage: UIImage(systemName: "person.circle.fill"),
+                profileImage: UIImage(named: "profile2"),
                 name: "chan",
                 statusMessage: "구의동",
                 lastMessage: "넵 수고하세용",
-                thumbnail: UIImage(systemName: "photo")
+                thumbnail: UIImage(named: "item2")
             ),
             ChatRoom(
-                profileImage: UIImage(systemName: "person.circle.fill"),
+                profileImage: UIImage(named: "profile3"),
                 name: "오지",
                 statusMessage: "보문동2가",
                 lastMessage: "안녕하세요 답장이 너무 늦었네여 죄송...",
-                thumbnail: UIImage(systemName: "headphones")
+                thumbnail: UIImage(named: "item3")
             ),
             ChatRoom(
-                profileImage: UIImage(systemName: "person.circle.fill"),
+                profileImage: UIImage(named: "profile4"),
                 name: "누룽지",
                 statusMessage: "연목동",
                 lastMessage: "이알다님이 이모티콘을 보냈어요.",
-                thumbnail: UIImage(systemName: "photo")
+                thumbnail: UIImage(named: "item4")
             ),
             ChatRoom(
-                profileImage: UIImage(systemName: "person.circle.fill"),
+                profileImage: UIImage(named: "profile5"),
                 name: "kenny",
                 statusMessage: "자양제4동",
                 lastMessage: "네.",
-                thumbnail: UIImage(systemName: "photo")
+                thumbnail: UIImage(named: "item5")
             ),
             ChatRoom(
-                profileImage: UIImage(systemName: "person.circle.fill"),
+                profileImage: UIImage(named: "profile6"),
                 name: "자리보금",
                 statusMessage: "옥수동",
                 lastMessage: "자리보금님이 이모티콘을 보냈어요.",
-                thumbnail: UIImage(systemName: "photo")
+                thumbnail: UIImage(named: "item6")
             ),
             ChatRoom(
-                profileImage: UIImage(systemName: "person.circle.fill"),
+                profileImage: UIImage(named: "profile1"),
                 name: "리빙스턴",
                 statusMessage: "연목동",
                 lastMessage: "리빙스턴님이 이모티콘을 보냈어요.",
-                thumbnail: UIImage(systemName: "sportscourt")
+                thumbnail: UIImage(named: "item7")
             ),
             ChatRoom(
-                profileImage: UIImage(systemName: "person.circle.fill"),
+                profileImage: UIImage(named: "profile2"),
                 name: "까롱이",
                 statusMessage: "중곡동",
                 lastMessage: "옷 예뻐네요!",
-                thumbnail: UIImage(systemName: "leaf")
+                thumbnail: UIImage(named: "item8")
             ),
             ChatRoom(
-                profileImage: UIImage(systemName: "person.circle.fill"),
+                profileImage: UIImage(named: "profile3"),
                 name: "깨롱이",
                 statusMessage: "중곡동",
                 lastMessage: "네.",
-                thumbnail: UIImage(systemName: "photo")
+                thumbnail: UIImage(named: "item9")
             ),
             ChatRoom(
-                profileImage: UIImage(systemName: "person.circle.fill"),
+                profileImage: UIImage(named: "profile4"),
                 name: "요우",
                 statusMessage: "근자동",
                 lastMessage: "감사합니다! 조심하거세요!",
-                thumbnail: UIImage(systemName: "photo")
+                thumbnail: UIImage(named: "item10")
             )
         ]
         tableView.reloadData()

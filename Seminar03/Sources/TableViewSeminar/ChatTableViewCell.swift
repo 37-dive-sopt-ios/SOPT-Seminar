@@ -126,3 +126,8 @@ final class ChatTableViewCell: UITableViewCell {
         thumbnailImageView.image = chatRoom.thumbnail
     }
 }
+
+
+#Preview {
+    ChatViewController()
+}
