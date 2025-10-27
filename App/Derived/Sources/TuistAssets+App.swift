@@ -41,6 +41,11 @@ public enum AppAsset: Sendable {
   public static let profile4 = AppImages(name: "profile4")
   public static let profile5 = AppImages(name: "profile5")
   public static let profile6 = AppImages(name: "profile6")
+  public static let rectangle2 = AppImages(name: "Rectangle 2")
+  public static let rectangle3 = AppImages(name: "Rectangle 3")
+  public static let rectangle4 = AppImages(name: "Rectangle 4")
+  public static let rectangle5 = AppImages(name: "Rectangle 5")
+  public static let rectangle6 = AppImages(name: "Rectangle 6")
 }
 
 // MARK: - Implementation Details

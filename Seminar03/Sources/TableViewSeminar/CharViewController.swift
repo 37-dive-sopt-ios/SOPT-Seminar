@@ -10,13 +10,13 @@ import Core
 import SnapKit
 
 public final class ChatViewController: UIViewController { // -- 1번
-    
+
     // MARK: - UI Components
     
     private let tableView = UITableView(frame: .zero, style: .plain) // -- 2번
     
     // MARK: - Properties
-    
+
     private var chatRooms: [ChatRoomModel] = []
     
     // MARK: - Initialization
@@ -67,7 +67,7 @@ public final class ChatViewController: UIViewController { // -- 1번
     }
     
     // MARK: - Data
-    
+
     private func loadMockData() {
         chatRooms = ChatRoomModel.mockData
         tableView.reloadData()

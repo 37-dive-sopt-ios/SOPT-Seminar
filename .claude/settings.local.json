@@ -10,7 +10,10 @@
       "Bash(brew install:*)",
       "Bash(xcodebuild:*)",
       "Bash(tuist clean)",
-      "Bash(cat /Users/imyeongjin/Desktop/SOPT-Seminar/Core/Resources/Assets.xcassets/item5.imageset/Contents.json)"
+      "Bash(cat /Users/imyeongjin/Desktop/SOPT-Seminar/Core/Resources/Assets.xcassets/item5.imageset/Contents.json)",
+      "Bash(for:*)",
+      "Bash(do)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []
