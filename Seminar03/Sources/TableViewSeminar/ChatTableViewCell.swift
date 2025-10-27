@@ -31,7 +31,7 @@ final class ChatTableViewCell: UITableViewCell {
         return label
     }()
 
-    private let statusLabel: UILabel = {
+    private let locationLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 13)
         label.textColor = .systemGray
@@ -80,7 +80,7 @@ final class ChatTableViewCell: UITableViewCell {
         contentView.addSubviews(
             profileImageView,
             nameLabel,
-            statusLabel,
+            locationLabel,
             messageLabel,
             thumbnailImageView
         )
@@ -98,7 +98,7 @@ final class ChatTableViewCell: UITableViewCell {
             $0.leading.equalTo(profileImageView.snp.trailing).offset(16)
         }
 
-        statusLabel.snp.makeConstraints {
+        locationLabel.snp.makeConstraints {
             $0.leading.equalTo(nameLabel.snp.trailing).offset(4)
             $0.centerY.equalTo(nameLabel)
         }
@@ -118,10 +118,10 @@ final class ChatTableViewCell: UITableViewCell {
 
     // MARK: - Configuration
 
-    func configure(with chatRoom: ChatRoom) {
+    func configure(with chatRoom: ChatRoomModel) {
         profileImageView.image = chatRoom.profileImage
         nameLabel.text = chatRoom.name
-        statusLabel.text = chatRoom.statusMessage
+        locationLabel.text = chatRoom.location
         messageLabel.text = chatRoom.lastMessage
         thumbnailImageView.image = chatRoom.thumbnail
     }

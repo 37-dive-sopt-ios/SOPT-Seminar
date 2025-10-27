@@ -236,7 +236,7 @@ import Seminar03
 rootViewController = Seminar03ViewController()
 ```
 
-### 5. 프로젝트 재생성
+### 5. 프로젝트 refresh
 ```bash
 tuist install
 tuist generate
@@ -265,7 +265,7 @@ tuist generate
 - [iOS Architecture Patterns](https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52)
 
 ## 👨‍💻 작성자
-- SOPT iOS 세미나
+- SOPT iOS 세미나 파트장 이명진.
 
 ---
 

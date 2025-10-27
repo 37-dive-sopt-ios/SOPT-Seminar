@@ -15,11 +15,8 @@
   import SwiftUI
 #endif
 
-// swiftlint:disable superfluous_disable_command file_length implicit_return
-
 // MARK: - Asset Catalogs
 
-// swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum Seminar03Asset: Sendable {
   public static let icAlarm = Seminar03Images(name: "ic_alarm")
   public static let icChat = Seminar03Images(name: "ic_chat")
@@ -45,7 +42,6 @@ public enum Seminar03Asset: Sendable {
   public static let profile5 = Seminar03Images(name: "profile5")
   public static let profile6 = Seminar03Images(name: "profile6")
 }
-// swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
 // MARK: - Implementation Details
 
@@ -101,5 +97,5 @@ public extension SwiftUI.Image {
 }
 #endif
 
-// swiftlint:enable all
 // swiftformat:enable all
+// swiftlint:enable all
