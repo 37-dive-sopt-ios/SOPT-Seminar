@@ -2,17 +2,9 @@ import UIKit
 
 #if SEMINAR01
 import Seminar01
-#elseif SEMINAR02
+#elseif SEMINAR02 || SEMINAR02_CLOSURE
 import Seminar02
-#elseif SEMINAR02_CLOSURE
-import Seminar02
-#elseif SEMINAR03
-import Seminar03
-#elseif SEMINAR03_MVC
-import Seminar03
-#elseif SEMINAR03_CHATLIST
-import Seminar03
-#elseif SEMINAR03_CVC
+#elseif SEMINAR03 || SEMINAR03_MVC || SEMINAR03_CHATLIST || SEMINAR03_CVC
 import Seminar03
 #elseif SEMINAR04
 import Seminar04
