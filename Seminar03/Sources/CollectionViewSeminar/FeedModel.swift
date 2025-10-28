@@ -30,6 +30,10 @@ public struct FeedModel {
         FeedModel(itemImg: UIImage(named: "feed2") ?? UIImage(), name: "에어팟 프로", price: "300,000원", isScrap: false),
         FeedModel(itemImg: UIImage(named: "feed3") ?? UIImage(), name: "커피머신", price: "100,000원", isScrap: false),
         FeedModel(itemImg: UIImage(named: "feed4") ?? UIImage(), name: "샌드위치", price: "8,000원", isScrap: false),
-        FeedModel(itemImg: UIImage(named: "feed5") ?? UIImage(), name: "명품 핸수", price: "250,000원", isScrap: false)
+        FeedModel(itemImg: UIImage(named: "feed5") ?? UIImage(), name: "명품 핸수", price: "250,000원", isScrap: false),
+        FeedModel(itemImg: UIImage(named: "feed1") ?? UIImage(), name: "아이패드 PRO", price: "1,400,000원", isScrap: false),
+        FeedModel(itemImg: UIImage(named: "feed2") ?? UIImage(), name: "airPod PRO 2", price: "330,000원", isScrap: false),
+        FeedModel(itemImg: UIImage(named: "feed3") ?? UIImage(), name: "마우스", price: "100,000원", isScrap: false),
+        FeedModel(itemImg: UIImage(named: "feed4") ?? UIImage(), name: "아 배고파", price: "8,000원", isScrap: false)
     ]
 }
