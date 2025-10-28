@@ -8,12 +8,19 @@
 import UIKit
 
 public struct FeedModel {
-    let itemImg: UIImage
-    let name: String
-    let price: String
-    var isScrap: Bool
+    public let itemImg: UIImage
+    public let name: String
+    public let price: String
+    public var isScrap: Bool
 
-    static let mockData: [FeedModel] = [
+    public init(itemImg: UIImage, name: String, price: String, isScrap: Bool) {
+        self.itemImg = itemImg
+        self.name = name
+        self.price = price
+        self.isScrap = isScrap
+    }
+
+    public static let mockData: [FeedModel] = [
         FeedModel(itemImg: UIImage(named: "feed1") ?? UIImage(), name: "아이폰 13프로맥스", price: "1,000,000원", isScrap: false),
         FeedModel(itemImg: UIImage(named: "feed2") ?? UIImage(), name: "에어팟 프로", price: "300,000원", isScrap: false),
         FeedModel(itemImg: UIImage(named: "feed3") ?? UIImage(), name: "커피머신", price: "100,000원", isScrap: false),

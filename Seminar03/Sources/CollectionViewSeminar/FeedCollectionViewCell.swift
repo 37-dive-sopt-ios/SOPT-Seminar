@@ -9,9 +9,9 @@ import UIKit
 import SnapKit
 import Core
 
-final class FeedCollectionViewCell: UICollectionViewCell {
+public final class FeedCollectionViewCell: UICollectionViewCell {
 
-    static let identifier: String = "FeedCollectionViewCell"
+    public static let identifier: String = "FeedCollectionViewCell"
 
     // MARK: - UI Components
 
@@ -51,7 +51,7 @@ final class FeedCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Initialization
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setUI()
         setHierarchy()
@@ -59,7 +59,7 @@ final class FeedCollectionViewCell: UICollectionViewCell {
         setActions()
     }
 
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -91,12 +91,12 @@ final class FeedCollectionViewCell: UICollectionViewCell {
         }
 
         nameLabel.snp.makeConstraints {
-            $0.top.equalTo(itemImageView.snp.bottom).offset(8)
+            $0.top.equalTo(itemImageView.snp.bottom).offset(4)
             $0.horizontalEdges.equalToSuperview()
         }
 
         priceLabel.snp.makeConstraints {
-            $0.top.equalTo(nameLabel.snp.bottom).offset(4)
+            $0.top.equalTo(nameLabel.snp.bottom).offset(2)
             $0.horizontalEdges.equalToSuperview()
         }
     }
@@ -114,7 +114,7 @@ final class FeedCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Configuration
 
-    func configure(with feed: FeedModel, scrapAction: @escaping () -> Void) {
+    public func configure(with feed: FeedModel, scrapAction: @escaping () -> Void) {
         itemImageView.image = feed.itemImg
         nameLabel.text = feed.name
         priceLabel.text = feed.price

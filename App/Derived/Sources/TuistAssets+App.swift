@@ -25,6 +25,11 @@ public enum AppAsset: Sendable {
   public static let icScrap = AppImages(name: "ic_scrap")
   public static let icScrapFill = AppImages(name: "ic_scrap_fill")
   public static let icSearch = AppImages(name: "ic_search")
+  public static let feed1 = AppImages(name: "feed1")
+  public static let feed2 = AppImages(name: "feed2")
+  public static let feed3 = AppImages(name: "feed3")
+  public static let feed4 = AppImages(name: "feed4")
+  public static let feed5 = AppImages(name: "feed5")
   public static let item1 = AppImages(name: "item1")
   public static let item10 = AppImages(name: "item10")
   public static let item2 = AppImages(name: "item2")
@@ -41,11 +46,6 @@ public enum AppAsset: Sendable {
   public static let profile4 = AppImages(name: "profile4")
   public static let profile5 = AppImages(name: "profile5")
   public static let profile6 = AppImages(name: "profile6")
-  public static let rectangle2 = AppImages(name: "Rectangle 2")
-  public static let rectangle3 = AppImages(name: "Rectangle 3")
-  public static let rectangle4 = AppImages(name: "Rectangle 4")
-  public static let rectangle5 = AppImages(name: "Rectangle 5")
-  public static let rectangle6 = AppImages(name: "Rectangle 6")
 }
 
 // MARK: - Implementation Details

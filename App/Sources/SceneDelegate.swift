@@ -12,6 +12,8 @@ import Seminar03
 import Seminar03
 #elseif SEMINAR03_CHATLIST
 import Seminar03
+#elseif SEMINAR03_CVC
+import Seminar03
 #elseif SEMINAR04
 import Seminar04
 #elseif SEMINAR05
@@ -50,6 +52,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         rootViewController = LoginViewController_CustomView()
         #elseif SEMINAR03_CHATLIST
         rootViewController = ChatViewController()
+        #elseif SEMINAR03_CVC
+        rootViewController = FeedCollectionViewController()
         #elseif SEMINAR04
         rootViewController = Seminar04ViewController()
         #elseif SEMINAR05

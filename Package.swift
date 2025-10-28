@@ -16,6 +16,7 @@ import PackageDescription
                 .debug(name: "Seminar03"),
                 .debug(name: "Seminar03MVC"),
                 .debug(name: "Seminar03ChatList"),
+                .debug(name: "Seminar03CVC"),
                 .debug(name: "Debug"),
                 .release(name: "Release")
             ]
