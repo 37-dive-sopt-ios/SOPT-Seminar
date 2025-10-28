@@ -1,12 +1,99 @@
-# Claude AI 코딩 가이드
+# Claude AI 프로젝트 가이드 (th1ngjin)
 
-> 이 파일은 Claude AI가 코드를 작성할 때 따라야 할 규칙과 패턴을 정의합니다.
+> Claude가 SOPT-Seminar 프로젝트에서 코드를 작성할 때 따라야 할 규칙과 컨텍스트
+
+---
+
+## 🎯 프로젝트 개요
+
+- **번들 ID**: `com.th1ngjin.*`
+- **아키텍처**: Tuist 기반 모듈화 구조
+- **배포 방식**: App 타겟 + 전처리기 플래그로 스킴 분기
+- **주요 문서**: `TUIST_WORKFLOW_GUIDE.md` (스킴/모듈 추가 시 필독)
+
+---
+
+## 📚 Tech Stack
+
+- **언어**: Swift 5.9+
+- **프레임워크**: UIKit
+- **레이아웃**: SnapKit 5.7+
+- **프로젝트 관리**: Tuist
+- **의존성**: Swift Package Manager
+
+---
+
+## 📁 프로젝트 구조
+
+```
+SOPT-Seminar/
+├── App/                    # 메인 앱 타겟
+│   ├── Sources/
+│   │   ├── SceneDelegate.swift  # 전처리기로 VC 분기
+│   │   └── AppDelegate.swift
+│   └── Resources/
+├── Core/                   # 공통 유틸리티 (addSubviews 등)
+├── Seminar01/              # 1차 세미나 모듈
+├── Seminar02/              # 2차 세미나 모듈
+├── Seminar03/              # 3차 세미나 모듈
+│   ├── Sources/
+│   │   ├── TableViewSeminar/
+│   │   └── CollectionViewSeminar/
+│   └── Resources/
+└── Tuist/
+    └── ProjectDescriptionHelpers/
+        ├── Configuration+Seminar.swift
+        ├── Project+Templates.swift
+        └── README.md
+```
+
+---
+
+## 🛠️ 주요 명령어
+
+- `tuist generate` - Xcode 프로젝트 생성
+- `tuist clean` - 캐시 정리
+- `tuist edit` - Tuist 매니페스트 편집
+
+---
+
+## 🔧 Tuist 워크플로우 (CRITICAL!)
+
+### 새 스킴 추가 시 (5단계)
+
+1. `Configuration+Seminar.swift`: case 추가
+2. `Configuration+Seminar.swift`: compilationFlag 추가
+3. `Package.swift`: configuration 추가
+4. `SceneDelegate.swift`: #if import & rootViewController 추가
+5. `App/Project.swift`: schemes 추가
+
+**상세 가이드**: `TUIST_WORKFLOW_GUIDE.md` 참조
+
+### SceneDelegate 전처리기 패턴 (현재 사용 중!)
+
+```swift
+#if SEMINAR01
+import Seminar01
+#elseif SEMINAR03_CVC
+import Seminar03
+#endif
+
+// ...
+
+#if SEMINAR01
+rootViewController = LoginViewController()
+#elseif SEMINAR03_CVC
+rootViewController = FeedCollectionViewController()
+#endif
+```
+
+---
 
 ## 📱 UI 코드 작성 규칙
 
-### ✅ 필수 구조
+### ✅ UIView 필수 3단계 구조
 
-모든 UIView/UIViewController의 UI 초기화는 다음 3단계 구조를 **반드시** 따릅니다:
+모든 UIView의 UI 초기화는 다음 3단계 구조를 **반드시** 따릅니다:
 
 ```swift
 override init(frame: CGRect) {
@@ -18,6 +105,34 @@ override init(frame: CGRect) {
 
 required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+}
+```
+
+### ✅ UIViewController 필수 구조
+
+**TableView/CollectionView 사용 시:**
+
+```swift
+public override func viewDidLoad() {
+    super.viewDidLoad()
+
+    setUI()         // 1. 기본 UI (title, backgroundColor 등)
+    register()      // 2. Cell 등록
+    setDelegate()   // 3. Delegate/DataSource 설정
+    setLayout()     // 4. 레이아웃 (view.addSubview + SnapKit)
+    loadMockData()  // 5. 데이터 로드 및 reloadData
+}
+```
+
+**일반 ViewController:**
+
+```swift
+public override func viewDidLoad() {
+    super.viewDidLoad()
+
+    setUI()         // 1. 기본 UI 설정
+    setHierarchy()  // 2. 뷰 계층 (addSubviews 사용)
+    setLayout()     // 3. 레이아웃
 }
 ```
 
@@ -119,6 +234,78 @@ class ExampleView: UIView {
 
     // MARK: - Configuration
     func configure(with data: Model) { ... }
+}
+```
+
+## 🎯 클래스 정의 규칙
+
+### final 키워드 사용
+상속하지 않는 모든 클래스는 `final` 키워드를 **필수**로 사용합니다.
+
+```swift
+// ✅ 올바른 예
+final class FeedCollectionViewCell: UICollectionViewCell {
+    // ...
+}
+
+public final class FeedCollectionViewController: UIViewController {
+    // ...
+}
+
+final class CustomView: UIView {
+    // ...
+}
+```
+
+```swift
+// ❌ 잘못된 예 (상속 안 할 거면 final 추가 필요)
+class MyCustomView: UIView {
+    // ...
+}
+
+public class MyViewController: UIViewController {
+    // ...
+}
+```
+
+### UIViewController 컴포넌트 정의
+UIViewController에 UI 컴포넌트가 있을 때는 반드시 별도로 정의하고, `// MARK: - UI Components` 주석으로 구분합니다.
+
+```swift
+// ✅ 올바른 예
+final class ExampleViewController: UIViewController {
+
+    // MARK: - UI Components
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 24, weight: .bold)
+        return label
+    }()
+
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .white
+        return tableView
+    }()
+
+    // MARK: - Initialization
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        setUI()
+        setHierarchy()
+        setLayout()
+    }
+}
+```
+
+```swift
+// ❌ 잘못된 예 (컴포넌트 정의 없이 viewDidLoad에서 직접 생성)
+final class BadViewController: UIViewController {
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        let titleLabel = UILabel()  // ❌ 컴포넌트를 여기서 생성하지 말 것
+        view.addSubview(titleLabel)
+    }
 }
 ```
 
@@ -239,19 +426,55 @@ class ExampleView: UIView {
 }
 ```
 
-## 📝 요약
+## 🚫 절대 금지 사항
 
-**Claude AI는 UI 코드를 작성할 때 반드시:**
-1. `setUI()` → `setHierarchy()` → `setLayout()` 구조 사용
-2. SnapKit으로 레이아웃 작성
-3. Core 모듈의 `addSubviews` 사용
-4. 적절한 MARK 주석 추가
-
-**절대 하지 말 것:**
-1. `setup~` 메서드명 사용
-2. `NSLayoutConstraint.activate` 사용
-3. 개별 `addSubview` 호출
+1. `setup~` 메서드명 (예: setupUI) → `set~` 사용
+2. `NSLayoutConstraint.activate` → SnapKit 사용
+3. 개별 `addSubview` 호출 → Core의 `addSubviews` 사용
+4. 상속하지 않는 클래스에 `final` 키워드 누락
+5. UIViewController에서 UI 컴포넌트를 별도 정의 없이 viewDidLoad에서 직접 생성
+6. 이모지 사용 (사용자 명시 요청 시에만)
+7. 스킴/모듈 추가 시 `TUIST_WORKFLOW_GUIDE.md` 읽지 않기
 
 ---
 
-*마지막 업데이트: 2025-10-24*
+## 💡 헬퍼 함수 (Project+Templates.swift)
+
+### 모듈 생성
+```swift
+Project.framework(name: "Seminar04", dependencies: [...])
+```
+
+### 스킴 생성
+```swift
+createSeminarScheme(number: 4)
+createCustomScheme(name: "Seminar04CVC", configurationName: "Seminar04CVC")
+```
+
+---
+
+## ⚡️ 빠른 참조
+
+| 작업 | 명령어/함수 |
+|------|-------------|
+| 프로젝트 생성 | `tuist generate` |
+| Framework 모듈 | `Project.framework(name:dependencies:)` |
+| 세미나 스킴 | `createSeminarScheme(number:)` |
+| 커스텀 스킴 | `createCustomScheme(name:configurationName:)` |
+| 뷰 추가 | `addSubviews(view1, view2)` |
+| 레이아웃 | `view.snp.makeConstraints { ... }` |
+
+---
+
+## 📝 작업 전 체크리스트
+
+- [ ] 스킴/모듈 추가인가? → `TUIST_WORKFLOW_GUIDE.md` 읽기
+- [ ] UI 코드인가? → 3단계 구조 확인
+- [ ] 다른 모듈에서 사용? → `public` 접근 제어
+- [ ] 작업 후 → `tuist generate` 테스트
+
+---
+
+**작성자**: th1ngjin
+**최종 업데이트**: 2025-10-28
+**버전**: 2.0
