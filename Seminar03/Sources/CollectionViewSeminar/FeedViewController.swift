@@ -1,5 +1,5 @@
 //
-//  FeedCollectionViewController.swift
+//  FeedViewController.swift
 //  Seminar03
 //
 //  Created by 이명진 on 10/27/25.
@@ -9,35 +9,32 @@ import UIKit
 import Core
 import SnapKit
 
-public final class FeedCollectionViewController: UIViewController {
+public final class FeedViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    private let lineSpacing: CGFloat = 10
+    private let itemSpacing: CGFloat = 21
+    private let cellHeight: CGFloat = 198
+    private let collectViewInset: UIEdgeInsets = .init(top: 0, left: 20, bottom: 0, right: 20)
+    
     
     // MARK: - UI Components
     
-    private let collectionView: UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 20
-        layout.minimumInteritemSpacing = 16
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 16, bottom: 20, right: 16)
+        layout.scrollDirection = .vertical // 디폴트가 버티컬 입니다
+        layout.minimumLineSpacing = lineSpacing
+        layout.minimumInteritemSpacing = itemSpacing
+        layout.sectionInset = collectViewInset
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .white
         return collectionView
     }()
     
-    // MARK: - Properties
     
     private var feeds: [FeedModel] = []
-    
-    // MARK: - Initialization
-    
-    public init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     // MARK: - Lifecycle
     
@@ -51,7 +48,7 @@ public final class FeedCollectionViewController: UIViewController {
         loadMockData()
     }
     
-    // MARK: - UI Setup
+    // MARK: - UI & Layout
     
     private func setUI() {
         view.backgroundColor = .white
@@ -85,7 +82,7 @@ public final class FeedCollectionViewController: UIViewController {
 
 // MARK: - UICollectionViewDelegate
 
-extension FeedCollectionViewController: UICollectionViewDelegate {
+extension FeedViewController: UICollectionViewDelegate {
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("\(feeds[indexPath.item].name) 선택됨")
     }
@@ -93,7 +90,7 @@ extension FeedCollectionViewController: UICollectionViewDelegate {
 
 // MARK: - UICollectionViewDataSource
 
-extension FeedCollectionViewController: UICollectionViewDataSource {
+extension FeedViewController: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return feeds.count
     }
@@ -103,21 +100,31 @@ extension FeedCollectionViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        cell.configure(with: feeds[indexPath.item]) { [weak self] in
-            self?.feeds[indexPath.item].isScrap.toggle()
-        }
+        cell.delegate = self
+        cell.configure(feed: feeds[indexPath.item])
         return cell
     }
 }
 
+
 // MARK: - UICollectionViewDelegateFlowLayout
 
-extension FeedCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension FeedViewController: UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let spacing: CGFloat = 16
-        let inset: CGFloat = 16
-        let width = (collectionView.frame.width - (spacing + inset * 2)) / 2
-        let height = width + 40
+        let horizontalInset: CGFloat = 20
+        let width = (collectionView.frame.width - (itemSpacing + horizontalInset * 2)) / 2
+        let height: CGFloat = cellHeight
         return CGSize(width: width, height: height)
+    }
+}
+
+// MARK: - FeedCollectionViewCellDelegate
+
+extension FeedViewController: FeedCollectionViewCellDelegate {
+    public func didTapScrapButton(_ cell: FeedCollectionViewCell) {
+        guard let indexPath = collectionView.indexPath(for: cell) else { return }
+        
+        feeds[indexPath.item].isScrap.toggle()
+        cell.scrapButton.isSelected.toggle()
     }
 }

@@ -53,7 +53,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         #elseif SEMINAR03_CHATLIST
         rootViewController = ChatViewController()
         #elseif SEMINAR03_CVC
-        rootViewController = FeedCollectionViewController()
+        rootViewController = FeedViewController()
         #elseif SEMINAR04
         rootViewController = Seminar04ViewController()
         #elseif SEMINAR05

@@ -9,9 +9,19 @@ import UIKit
 import SnapKit
 import Core
 
+// MARK: - Delegate Protocol
+
+public protocol FeedCollectionViewCellDelegate: AnyObject {
+    func didTapScrapButton(_ cell: FeedCollectionViewCell)
+}
+
 public final class FeedCollectionViewCell: UICollectionViewCell {
     
     public static let identifier: String = "FeedCollectionViewCell"
+    
+    // MARK: - Delegate
+    
+    public weak var delegate: FeedCollectionViewCellDelegate?
     
     // MARK: - UI Components
     
@@ -38,32 +48,30 @@ public final class FeedCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private let scrapButton: UIButton = {
+    public let scrapButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "ic_scrap"), for: .normal)
         button.setImage(UIImage(named: "ic_scrap_fill"), for: .selected)
         return button
     }()
     
-    // MARK: - Properties
-    
-    private var scrapAction: (() -> Void)?
     
     // MARK: - Initialization
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        
         setUI()
         setHierarchy()
         setLayout()
-        setActions()
+        setAddTarget()
     }
     
     public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - UI Setup
+    // MARK: - UI & Layout
     
     private func setUI() {
         contentView.backgroundColor = .white
@@ -80,7 +88,8 @@ public final class FeedCollectionViewCell: UICollectionViewCell {
     
     private func setLayout() {
         itemImageView.snp.makeConstraints {
-            $0.top.horizontalEdges.equalToSuperview()
+            $0.top.equalToSuperview()
+            $0.horizontalEdges.equalToSuperview().inset(9)
             $0.height.equalTo(itemImageView.snp.width)
         }
         
@@ -91,34 +100,32 @@ public final class FeedCollectionViewCell: UICollectionViewCell {
         }
         
         nameLabel.snp.makeConstraints {
-            $0.top.equalTo(itemImageView.snp.bottom).offset(4)
-            $0.horizontalEdges.equalToSuperview()
+            $0.top.equalTo(itemImageView.snp.bottom).offset(3)
+            $0.horizontalEdges.equalTo(itemImageView).inset(8)
         }
         
         priceLabel.snp.makeConstraints {
             $0.top.equalTo(nameLabel.snp.bottom).offset(2)
-            $0.horizontalEdges.equalToSuperview()
+            $0.horizontalEdges.equalTo(itemImageView).inset(8)
         }
     }
     
-    private func setActions() {
+    private func setAddTarget() {
         scrapButton.addTarget(self, action: #selector(scrapButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Actions
     
     @objc private func scrapButtonTapped() {
-        scrapButton.isSelected.toggle()
-        scrapAction?()
+        delegate?.didTapScrapButton(self)
     }
     
     // MARK: - Configuration
     
-    public func configure(with feed: FeedModel, scrapAction: @escaping () -> Void) {
+    public func configure(feed: FeedModel) {
         itemImageView.image = feed.itemImg
         nameLabel.text = feed.name
         priceLabel.text = feed.price
         scrapButton.isSelected = feed.isScrap
-        self.scrapAction = scrapAction
     }
 }
