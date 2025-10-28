@@ -72,32 +72,3 @@ let project = Project(
         )
     ]
 )
-
-// 세미나 스킴 생성 함수
-private func createSeminarScheme(number: Int) -> Scheme {
-    let paddedNumber = number < 10 ? "0\(number)" : "\(number)"
-    let seminarName = "Seminar\(paddedNumber)"
-    return .scheme(
-        name: seminarName,
-        shared: true,
-        buildAction: .buildAction(targets: ["App"]),
-        runAction: .runAction(
-            configuration: .configuration(seminarName),
-            executable: "App"
-        )
-    )
-}
-
-private func createSeminarClosureScheme(number: Int) -> Scheme {
-    let paddedNumber = number < 10 ? "0\(number)" : "\(number)"
-    let seminarName = "Seminar\(paddedNumber)Closure"
-    return .scheme(
-        name: seminarName,
-        shared: true,
-        buildAction: .buildAction(targets: ["App"]),
-        runAction: .runAction(
-            configuration: .configuration(seminarName),
-            executable: "App"
-        )
-    )
-}
