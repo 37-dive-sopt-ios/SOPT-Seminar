@@ -1,5 +1,5 @@
 //
-//  CharViewController.swift
+//  ChatViewController.swift
 //  Seminar03
 //
 //  Created by 이명진 on 10/26/25.
