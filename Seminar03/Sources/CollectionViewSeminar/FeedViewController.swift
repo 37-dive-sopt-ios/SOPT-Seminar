@@ -124,7 +124,7 @@ extension FeedViewController: FeedCollectionViewCellDelegate {
     public func didTapScrapButton(_ cell: FeedCollectionViewCell) {
         guard let indexPath = collectionView.indexPath(for: cell) else { return }
         
-        feeds[indexPath.item].isScrap.toggle()
-        cell.scrapButton.isSelected.toggle()
+        feeds[indexPath.item].isScrap.toggle() // feed의 값을 변경 시키고
+        cell.scrapButton.isSelected.toggle() // cell에 접근해서 해당 scrapbutton을 토글
     }
 }
