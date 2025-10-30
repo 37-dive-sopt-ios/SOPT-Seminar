@@ -280,4 +280,3 @@ schemes: [
 ---
 
 **작성자**: th1ngjin
-**참고**: [GREEN 블로그 - Tuist Configuration](https://green1229.tistory.com)

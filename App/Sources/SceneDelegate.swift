@@ -4,7 +4,7 @@ import UIKit
 import Seminar01
 #elseif SEMINAR02 || SEMINAR02_CLOSURE
 import Seminar02
-#elseif SEMINAR03 || SEMINAR03_MVC || SEMINAR03_CHATLIST || SEMINAR03_CVC
+#elseif SEMINAR03 || SEMINAR03_MVC || SEMINAR03_CHATLIST || SEMINAR03_CVC || SEMINAR03_DIFFABLE
 import Seminar03
 #elseif SEMINAR04
 import Seminar04
@@ -46,6 +46,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         rootViewController = ChatViewController()
         #elseif SEMINAR03_CVC
         rootViewController = FeedViewController()
+        #elseif SEMINAR03_DIFFABLE
+        rootViewController = DiffableViewController()
         #elseif SEMINAR04
         rootViewController = Seminar04ViewController()
         #elseif SEMINAR05

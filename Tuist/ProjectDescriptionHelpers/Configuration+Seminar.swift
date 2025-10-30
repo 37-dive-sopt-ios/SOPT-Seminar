@@ -11,6 +11,7 @@ public enum SeminarConfig: String, CaseIterable {
     case seminar03MVC = "Seminar03MVC"
     case seminar03ChatList = "Seminar03ChatList"
     case seminar03CVC = "Seminar03CVC"
+    case seminar03Diffable = "Seminar03Diffable"
 
     /// Configuration 이름
     var configurationName: ConfigurationName {
@@ -34,6 +35,8 @@ public enum SeminarConfig: String, CaseIterable {
             return "SEMINAR03_CHATLIST"
         case .seminar03CVC:
             return "SEMINAR03_CVC"
+        case .seminar03Diffable:
+            return "SEMINAR03_DIFFABLE"
         }
     }
 

@@ -69,6 +69,15 @@ let project = Project(
                 configuration: .configuration("Seminar03CVC"),
                 executable: "App"
             )
+        ),
+        .scheme(
+            name: "Seminar03Diffable",
+            shared: true,
+            buildAction: .buildAction(targets: ["App"]),
+            runAction: .runAction(
+                configuration: .configuration("Seminar03Diffable"),
+                executable: "App"
+            )
         )
     ]
 )
