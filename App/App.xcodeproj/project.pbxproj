@@ -18,9 +18,11 @@
 		4612E34176975FF239FDBB2E /* Seminar02.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDC0AE117B3C805E35768963 /* Seminar02.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		48469C5111BF762561C9B9B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F7F83A194E1D17030DCA033 /* Assets.xcassets */; };
 		57A4C34D3B42E3AFDD8356D3 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE442BA1C87E9CF5D190ED8 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8DB4DE68099B7F44017ACB12 /* Seminar04.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1FA06D17DF77EB37D1C939 /* Seminar04.framework */; };
 		9E6569B360C5040FD4C8A7FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED69542D699D2104EE8BFC4 /* SceneDelegate.swift */; };
 		AAB073F1221B89F1B9D0816C /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 514C6A786251DDEC6B3DFF77 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E32FFA13452CBAE81F3FDBFF /* Seminar03.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04449B8B4B2AA39E1843EB6B /* Seminar03.framework */; };
+		E78F045E20EE3A75B275DB00 /* Seminar04.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1FA06D17DF77EB37D1C939 /* Seminar04.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FE078F42728C23B77EE02A1B /* TuistBundle+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CD4D343ECF7F321C1905D /* TuistBundle+App.swift */; };
 		FEE46EC8B9E2BBC9C16F4684 /* Seminar01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B715763AF72472036FF151A1 /* Seminar01.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,7 @@
 				03432F024027F694C19DC4DC /* Seminar01.framework in Embed Frameworks */,
 				4612E34176975FF239FDBB2E /* Seminar02.framework in Embed Frameworks */,
 				1C045CAFA93445F405BB8554 /* Seminar03.framework in Embed Frameworks */,
+				E78F045E20EE3A75B275DB00 /* Seminar04.framework in Embed Frameworks */,
 				57A4C34D3B42E3AFDD8356D3 /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -54,6 +57,7 @@
 		571E08A9083FD4334E4B7D06 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F028640EE676F9CD747A9A /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		7210F22777D23AD1713BCADE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7B1FA06D17DF77EB37D1C939 /* Seminar04.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Seminar04.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7F83A194E1D17030DCA033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95D529DAAF6A9D59C44D9D68 /* TuistAssets+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+App.swift"; sourceTree = "<group>"; };
 		B715763AF72472036FF151A1 /* Seminar01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Seminar01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +73,7 @@
 				FEE46EC8B9E2BBC9C16F4684 /* Seminar01.framework in Frameworks */,
 				04A1DBB56A3863828A3D7F2B /* Seminar02.framework in Frameworks */,
 				E32FFA13452CBAE81F3FDBFF /* Seminar03.framework in Frameworks */,
+				8DB4DE68099B7F44017ACB12 /* Seminar04.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +151,7 @@
 				B715763AF72472036FF151A1 /* Seminar01.framework */,
 				DDC0AE117B3C805E35768963 /* Seminar02.framework */,
 				04449B8B4B2AA39E1843EB6B /* Seminar03.framework */,
+				7B1FA06D17DF77EB37D1C939 /* Seminar04.framework */,
 				0DE442BA1C87E9CF5D190ED8 /* SnapKit.framework */,
 			);
 			name = Products;
@@ -450,6 +456,66 @@
 			};
 			name = Seminar03CVC;
 		};
+		79D297527A743A12C5D39A65 /* Seminar02FlexLayout */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SEMINAR02_FLEXLAYOUT;
+			};
+			name = Seminar02FlexLayout;
+		};
 		7AB89155D71413FC4FFEEE74 /* Seminar03Diffable */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -716,6 +782,32 @@
 			};
 			name = Seminar03MVC;
 		};
+		97078776908C74FAE6FAACA7 /* Seminar04 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/App-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.th1ngjin.App;
+				PRODUCT_NAME = App;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SEMINAR04;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Seminar04;
+		};
 		971372934280508F9160CCDE /* Seminar02Closure */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -741,6 +833,32 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Seminar02Closure;
+		};
+		9FB9E0910A9BC97F46D52C05 /* Seminar02FlexLayout */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/App-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.th1ngjin.App;
+				PRODUCT_NAME = App;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SEMINAR02_FLEXLAYOUT;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Seminar02FlexLayout;
 		};
 		B21B8A0196E92E2C4F645B60 /* Seminar03ChatList */ = {
 			isa = XCBuildConfiguration;
@@ -913,6 +1031,66 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SEMINAR01;
 			};
 			name = Seminar01;
+		};
+		D61B61B9BE6FC20E8DCA25B8 /* Seminar04 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SEMINAR04;
+			};
+			name = Seminar04;
 		};
 		E1A9B2FDBF2FAE799EA04EAF /* Seminar02 */ = {
 			isa = XCBuildConfiguration;
@@ -1095,11 +1273,13 @@
 				D4C55B5548D189ED5A6434AF /* Seminar01 */,
 				E1A9B2FDBF2FAE799EA04EAF /* Seminar02 */,
 				BCDAB21A376584F3D8597D50 /* Seminar02Closure */,
+				79D297527A743A12C5D39A65 /* Seminar02FlexLayout */,
 				2079A03E43D107605C4D5862 /* Seminar03 */,
 				7B097A72DE69D3D950E03C71 /* Seminar03CVC */,
 				7B94F27BCA4F67317890C20F /* Seminar03ChatList */,
 				7AB89155D71413FC4FFEEE74 /* Seminar03Diffable */,
 				94014EE3640CD4B8BD2FFFF4 /* Seminar03MVC */,
+				D61B61B9BE6FC20E8DCA25B8 /* Seminar04 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1112,11 +1292,13 @@
 				CFA5BCD2598E23A67152DAEB /* Seminar01 */,
 				8F8D7B04DB551E71D0A80871 /* Seminar02 */,
 				971372934280508F9160CCDE /* Seminar02Closure */,
+				9FB9E0910A9BC97F46D52C05 /* Seminar02FlexLayout */,
 				F7EBB24D2BFDC38AA1D1A87A /* Seminar03 */,
 				721E6EC3C43E8E131BDD9BB1 /* Seminar03CVC */,
 				B21B8A0196E92E2C4F645B60 /* Seminar03ChatList */,
 				28FC7D66D69BDBA8230E480A /* Seminar03Diffable */,
 				17F25DEACD126942B582C126 /* Seminar03MVC */,
+				97078776908C74FAE6FAACA7 /* Seminar04 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

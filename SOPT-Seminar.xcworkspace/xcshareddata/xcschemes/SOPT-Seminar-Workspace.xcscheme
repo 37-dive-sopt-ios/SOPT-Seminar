@@ -84,6 +84,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "921C60C862BEA4123314F5D4"
+               BuildableName = "Seminar04.framework"
+               BlueprintName = "Seminar04"
+               ReferencedContainer = "container:Seminar04/Seminar04.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "8A043024BB190898066F1729"
                BuildableName = "SnapKit.framework"
                BlueprintName = "SnapKit"

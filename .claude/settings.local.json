@@ -14,7 +14,11 @@
       "Bash(for:*)",
       "Bash(do)",
       "Bash(done)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(find:*)",
+      "Bash(if [ -f \"$file\" ])",
+      "Bash(then)",
+      "Bash(fi)"
     ],
     "deny": [],
     "ask": []

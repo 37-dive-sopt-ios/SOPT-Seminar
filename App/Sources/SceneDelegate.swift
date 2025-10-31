@@ -2,7 +2,7 @@ import UIKit
 
 #if SEMINAR01
 import Seminar01
-#elseif SEMINAR02 || SEMINAR02_CLOSURE
+#elseif SEMINAR02 || SEMINAR02_CLOSURE || SEMINAR02_FLEXLAYOUT
 import Seminar02
 #elseif SEMINAR03 || SEMINAR03_MVC || SEMINAR03_CHATLIST || SEMINAR03_CVC || SEMINAR03_DIFFABLE
 import Seminar03
@@ -38,6 +38,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         rootViewController = LoginViewController_Delegate()
         #elseif SEMINAR02_CLOSURE
         rootViewController = LoginViewController_Closure()
+        #elseif SEMINAR02_FLEXLAYOUT
+        rootViewController = LoginViewController_FlexLayout()
         #elseif SEMINAR03
         rootViewController = LoginViewController_MVC()
         #elseif SEMINAR03_MVC
@@ -49,7 +51,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         #elseif SEMINAR03_DIFFABLE
         rootViewController = DiffableViewController()
         #elseif SEMINAR04
-        rootViewController = Seminar04ViewController()
+        rootViewController = LoginViewController_Network()
         #elseif SEMINAR05
         rootViewController = Seminar05ViewController()
         #elseif SEMINAR06

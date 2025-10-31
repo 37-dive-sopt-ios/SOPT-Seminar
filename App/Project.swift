@@ -22,6 +22,9 @@ let project = Project(
                             ]
                         ]
                     ]
+                ],
+                "NSAppTransportSecurity": [
+                    "NSAllowsArbitraryLoads": true
                 ]
             ]),
             sources: ["Sources/**"],
@@ -30,7 +33,8 @@ let project = Project(
                 .project(target: "Core", path: "../Core"),
                 .project(target: "Seminar01", path: "../Seminar01"),
                 .project(target: "Seminar02", path: "../Seminar02"),
-                .project(target: "Seminar03", path: "../Seminar03")
+                .project(target: "Seminar03", path: "../Seminar03"),
+                .project(target: "Seminar04", path: "../Seminar04")
             ],
             settings: .settings(
                 base: [:],
@@ -76,6 +80,15 @@ let project = Project(
             buildAction: .buildAction(targets: ["App"]),
             runAction: .runAction(
                 configuration: .configuration("Seminar03Diffable"),
+                executable: "App"
+            )
+        ),
+        .scheme(
+            name: "Seminar04",
+            shared: true,
+            buildAction: .buildAction(targets: ["App"]),
+            runAction: .runAction(
+                configuration: .configuration("Seminar04"),
                 executable: "App"
             )
         )
