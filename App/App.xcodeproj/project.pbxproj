@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		004FD1E183A2F52A4913C9DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7210F22777D23AD1713BCADE /* AppDelegate.swift */; };
-		0124B5187DA64DDD60250AD7 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514C6A786251DDEC6B3DFF77 /* Core.framework */; };
 		03432F024027F694C19DC4DC /* Seminar01.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B715763AF72472036FF151A1 /* Seminar01.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04A1DBB56A3863828A3D7F2B /* Seminar02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC0AE117B3C805E35768963 /* Seminar02.framework */; };
 		0F3EBD548A92D7401B1FC633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057A3CD8D734F9C1B4948C18 /* LaunchScreen.storyboard */; };
@@ -69,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0124B5187DA64DDD60250AD7 /* Core.framework in Frameworks */,
 				FEE46EC8B9E2BBC9C16F4684 /* Seminar01.framework in Frameworks */,
 				04A1DBB56A3863828A3D7F2B /* Seminar02.framework in Frameworks */,
 				E32FFA13452CBAE81F3FDBFF /* Seminar03.framework in Frameworks */,
