@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnapKit
 
 /// - POP(Protocol Oriented Programming) 적용
 open class BaseViewController: UIViewController, Alertable, LoadingIndicatorable {
@@ -18,6 +17,7 @@ open class BaseViewController: UIViewController, Alertable, LoadingIndicatorable
         let indicator = UIActivityIndicatorView(style: .large)
         indicator.color = .systemBlue
         indicator.hidesWhenStopped = true
+        indicator.translatesAutoresizingMaskIntoConstraints = false
         return indicator
     }()
     
@@ -42,9 +42,10 @@ open class BaseViewController: UIViewController, Alertable, LoadingIndicatorable
         
         view.addSubview(loadingIndicator)
         
-        loadingIndicator.snp.makeConstraints {
-            $0.center.equalToSuperview()
-        }
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
         
         // 탭 제스처로 키보드 닫기
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
