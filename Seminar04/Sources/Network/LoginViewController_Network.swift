@@ -29,6 +29,7 @@ public final class LoginViewController_Network: BaseViewController {
         textField.borderStyle = .roundedRect
         textField.autocapitalizationType = .none
         textField.text = "mj"  // 테스트용 기본값
+        textField.addPadding()
         return textField
     }()
     
@@ -38,6 +39,7 @@ public final class LoginViewController_Network: BaseViewController {
         textField.borderStyle = .roundedRect
         textField.isSecureTextEntry = true
         textField.text = "Aa1234!@"  // 테스트용 기본값
+        textField.addPadding()
         return textField
     }()
     
@@ -46,6 +48,7 @@ public final class LoginViewController_Network: BaseViewController {
         textField.placeholder = "이름 (예: 홍길동)"
         textField.borderStyle = .roundedRect
         textField.text = "이명진"  // 테스트용 기본값
+        textField.addPadding()
         return textField
     }()
     
@@ -56,6 +59,7 @@ public final class LoginViewController_Network: BaseViewController {
         textField.keyboardType = .emailAddress
         textField.autocapitalizationType = .none
         textField.text = "test@naver.com"  // 테스트용 기본값
+        textField.addPadding()
         return textField
     }()
     
@@ -65,13 +69,14 @@ public final class LoginViewController_Network: BaseViewController {
         textField.borderStyle = .roundedRect
         textField.keyboardType = .numberPad
         textField.text = "29"  // 테스트용 기본값
+        textField.addPadding()
         return textField
     }()
     
     private lazy var registerButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("회원가입 (POST /api/v1/users)", for: .normal)
-        button.backgroundColor = .systemBlue
+        button.backgroundColor = .daangn // 여러분 에러
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
         button.layer.cornerRadius = 8
@@ -131,7 +136,7 @@ public final class LoginViewController_Network: BaseViewController {
     
     private func setLayout() {
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(40)
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(25)
             $0.horizontalEdges.equalToSuperview().inset(20)
         }
         
@@ -292,4 +297,8 @@ public final class LoginViewController_Network: BaseViewController {
         let welcomeVC = WelcomeViewController_Network(userId: userId, userName: userName)
         navigationController?.pushViewController(welcomeVC, animated: true)
     }
+}
+
+#Preview {
+    LoginViewController_Network()
 }
