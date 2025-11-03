@@ -7,7 +7,6 @@ public enum SeminarConfig: String, CaseIterable {
     case seminar01 = "Seminar01"
     case seminar02 = "Seminar02"
     case seminar02Closure = "Seminar02Closure"
-    case seminar02FlexLayout = "Seminar02FlexLayout"
     case seminar03 = "Seminar03"
     case seminar03MVC = "Seminar03MVC"
     case seminar03ChatList = "Seminar03ChatList"
@@ -29,8 +28,6 @@ public enum SeminarConfig: String, CaseIterable {
             return "SEMINAR02"
         case .seminar02Closure:
             return "SEMINAR02_CLOSURE"
-        case .seminar02FlexLayout:
-            return "SEMINAR02_FLEXLAYOUT"
         case .seminar03:
             return "SEMINAR03"
         case .seminar03MVC:
