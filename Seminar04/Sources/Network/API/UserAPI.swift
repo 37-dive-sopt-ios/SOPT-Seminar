@@ -24,6 +24,7 @@ extension UserAPI: TargetType {
     /// 기본 URL
     public var baseURL: String {
         // SOPT 세미나 서버 URL (4주차 임시 개방)
+        // TODO: 실제 배포 시에는 xcconfig 파일이나 환경 변수로 관리하세요
         return "http://15.164.129.239"
     }
 

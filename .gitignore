@@ -146,3 +146,6 @@ Tuist/Dependencies/
 Tuist/Automation/Derived/
 Tuist/.build/
 *.tuist-cache
+
+# Secrets - 민감한 정보가 포함된 파일
+Seminar04/Sources/Network/API/UserAPI.swift

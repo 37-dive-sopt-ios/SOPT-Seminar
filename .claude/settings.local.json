@@ -18,7 +18,9 @@
       "Bash(find:*)",
       "Bash(if [ -f \"$file\" ])",
       "Bash(then)",
-      "Bash(fi)"
+      "Bash(fi)",
+      "Read(//Users/imyeongjin/Library/Developer/Xcode/DerivedData/**)",
+      "Bash(xargs cat:*)"
     ],
     "deny": [],
     "ask": []
