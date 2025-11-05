@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		16019891AFC9978976CF1684 /* WelcomeViewController_SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8BCE9D6D2FAC54A400D46 /* WelcomeViewController_SnapKit.swift */; };
 		2B5A69D63A71FD92C8B7C3EB /* WelcomeViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A59D3D1252042E049B79 /* WelcomeViewController_Closure.swift */; };
+		2C7918DA506B512512209022 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 3612132CCBC558ED0E5F380C /* .gitkeep */; };
 		2F6316D04D4FBED10F21D361 /* TuistBundle+Seminar02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46721CFCFD941174C7BAA1E1 /* TuistBundle+Seminar02.swift */; };
 		47ADF304F1740D44744F70D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E2DDE2C0AD09A0A33A958B1 /* Assets.xcassets */; };
 		4BC1EA6D72D9B99C8540AAAF /* LoginViewController_Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279595BA7A25E03E4F55A3B4 /* LoginViewController_Delegate.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		1E2DDE2C0AD09A0A33A958B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		279595BA7A25E03E4F55A3B4 /* LoginViewController_Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Delegate.swift; sourceTree = "<group>"; };
+		3612132CCBC558ED0E5F380C /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		46721CFCFD941174C7BAA1E1 /* TuistBundle+Seminar02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Seminar02.swift"; sourceTree = "<group>"; };
 		578687294A428ADDBE58B545 /* LoginViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Closure.swift; sourceTree = "<group>"; };
 		5E9AEBA1FAE1D43612467FD7 /* WelcomeViewController_Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Delegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		572EAB36807F9F456695961B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3612132CCBC558ED0E5F380C /* .gitkeep */,
 				1E2DDE2C0AD09A0A33A958B1 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -213,8 +216,6 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = DB849C52035D04DA741213BF /* Build configuration list for PBXProject "Seminar02" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -239,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C7918DA506B512512209022 /* .gitkeep in Resources */,
 				47ADF304F1740D44744F70D2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
