@@ -116,6 +116,7 @@ extension UserAPI {
         guard let data = response.data else {
             throw NetworkError.noData
         }
+        
         return data
     }
 
@@ -131,6 +132,7 @@ extension UserAPI {
         guard let data = response.data else {
             throw NetworkError.noData
         }
+        
         return data
     }
 
@@ -144,6 +146,7 @@ extension UserAPI {
         guard let data = response.data else {
             throw NetworkError.noData
         }
+        
         return data
     }
 

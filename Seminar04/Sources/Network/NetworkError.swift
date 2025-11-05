@@ -9,15 +9,15 @@ import Foundation
 
 /// 네트워크 에러 타입
 public enum NetworkError: Error {
-    case invalidURL
-    case invalidResponse
-    case noData
-    case decodingFailed
-    case encodingFailed
-    case serverError(statusCode: Int, message: String?)
-    case unknown(Error)
+    case invalidURL          // NetworkProvider에서 URL 생성 실패 시 throw
+    case invalidResponse     // NetworkProvider에서 HTTPURLResponse 변환 실패 시 throw
+    case noData              // UserAPI convenience methods에서 response.data가 nil일 때 throw
+    case decodingFailed      // NetworkProvider에서 JSON 디코딩 실패 시 throw
+    case encodingFailed      // NetworkProvider에서 Request body 인코딩 실패 시 throw
+    case serverError(statusCode: Int, message: String?)  // NetworkProvider에서 400~599 에러 발생 시 throw
+    case unknown(Error)      // NetworkProvider에서 URLSession 에러 catch 시 throw
 
-    /// 사용자에게 보여줄 에러 메시지
+    /// 사용자에게 보여줄 에러 메시지 (ViewController의 Alert에서 사용)
     public var localizedDescription: String {
         switch self {
         case .invalidURL:
@@ -40,7 +40,7 @@ public enum NetworkError: Error {
         }
     }
 
-    /// 상세 에러 정보 (디버깅/로깅용)
+    /// 상세 에러 정보 (디버깅/로깅용 - print()나 Logger에서 사용)
     public var detailedDescription: String {
         switch self {
         case .invalidURL:
@@ -62,6 +62,7 @@ public enum NetworkError: Error {
 
     // MARK: - Private Helpers
 
+    /// HTTP 상태 코드별 에러 메시지 생성 (localizedDescription에서 호출)
     private func serverErrorMessage(statusCode: Int, message: String?) -> String {
         let baseMessage: String
         switch statusCode {
@@ -88,6 +89,7 @@ public enum NetworkError: Error {
         }
     }
 
+    /// URLError 타입별 에러 메시지 생성 (localizedDescription에서 호출)
     private func urlErrorMessage(_ error: URLError) -> String {
         switch error.code {
         case .notConnectedToInternet:

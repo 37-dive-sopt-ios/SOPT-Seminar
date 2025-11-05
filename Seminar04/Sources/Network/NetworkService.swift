@@ -53,14 +53,12 @@ public final class NetworkProvider: NetworkProviding {
 
             // 4. 상태 코드 체크
             guard (200...299).contains(httpResponse.statusCode) else {
-                let errorMessage = try? JSONDecoder().decode(
-                    BaseResponse<EmptyResponse>.self,
-                    from: data
-                ).message
+                let response = try? JSONDecoder().decode(BaseResponse<EmptyResponse>.self, from: data)
                 let error = NetworkError.serverError(
                     statusCode: httpResponse.statusCode,
-                    message: errorMessage
+                    message: response?.message
                 )
+
                 printError(error, data: data)
                 throw error
             }
@@ -68,7 +66,7 @@ public final class NetworkProvider: NetworkProviding {
             // 5. 데이터 디코딩
             do {
                 let decodedData = try JSONDecoder().decode(T.self, from: data)
-                printSuccess()
+                printSuccess() // 여기 까지 왔으면 서버통신 성공
                 return decodedData
             } catch let decodingError {
                 print("❌ Decoding Error Details:")
