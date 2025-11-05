@@ -196,7 +196,7 @@ public final class LoginViewController_Network: BaseViewController {
         }
         
         // Swift Concurrency를 사용한 네트워크 요청!
-        _Concurrency.Task {
+        Task {
             await performRegister(
                 username: username,
                 password: password,
@@ -215,7 +215,7 @@ public final class LoginViewController_Network: BaseViewController {
         }
         
         // Swift Concurrency를 사용한 네트워크 요청!
-        _Concurrency.Task {
+        Task {
             await performLogin(username: username, password: password)
         }
     }

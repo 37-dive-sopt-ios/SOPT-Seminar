@@ -49,7 +49,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         #elseif SEMINAR03_DIFFABLE
         rootViewController = DiffableViewController()
         #elseif SEMINAR04
-        rootViewController = LoginViewController_Network()
+        rootViewController = BasicNetworkViewController()  // 기본 네트워크 학습용
         #elseif SEMINAR05
         rootViewController = Seminar05ViewController()
         #elseif SEMINAR06

@@ -61,7 +61,7 @@ extension UserAPI: TargetType {
     }
 
     /// The type of HTTP task to be performed.
-    public var task: Task {
+    public var task: HTTPTask {
         switch self {
         case .register(let request):
             // JSON 인코딩 가능한 객체를 바디로 전송

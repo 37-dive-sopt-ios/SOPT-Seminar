@@ -8,7 +8,7 @@
 import Foundation
 
 /// HTTP Task를 정의하는 enum (Moya의 Task와 동일!)
-public enum Task {
+public enum HTTPTask {
     /// 요청만 보냄 (바디 없음)
     case requestPlain
 
@@ -20,6 +20,7 @@ public enum Task {
 }
 
 /// 파라미터 인코딩 방식 (Moya와 유사)
+/// 실제 라이브러리를 뜯어보면 유사하게 되어있습니다.
 public enum ParameterEncoding {
     case url
     case json
@@ -39,7 +40,7 @@ public protocol TargetType {
     var method: Method { get }
 
     /// The type of HTTP task to be performed.
-    var task: Task { get }
+    var task: HTTPTask { get }
 
     /// The headers to be used in the request.
     var headers: [String: String]? { get }
@@ -68,7 +69,7 @@ public extension TargetType {
             request.setValue(value, forHTTPHeaderField: key)
         }
 
-        // Task에 따라 바디 처리 (Moya와 동일한 방식!)
+        // HTTPTask에 따라 바디 처리 (Moya와 동일한 방식!)
         switch task {
         case .requestPlain:
             // 바디 없음

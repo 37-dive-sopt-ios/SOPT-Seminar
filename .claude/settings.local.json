@@ -20,7 +20,8 @@
       "Bash(then)",
       "Bash(fi)",
       "Read(//Users/imyeongjin/Library/Developer/Xcode/DerivedData/**)",
-      "Bash(xargs cat:*)"
+      "Bash(xargs cat:*)",
+      "Bash(xcrun simctl:*)"
     ],
     "deny": [],
     "ask": []

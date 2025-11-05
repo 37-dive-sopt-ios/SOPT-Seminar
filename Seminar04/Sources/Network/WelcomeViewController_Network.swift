@@ -208,13 +208,13 @@ public final class WelcomeViewController_Network: BaseViewController {
     // MARK: - Actions
     
     @objc private func getUserButtonTapped() {
-        _Concurrency.Task {
+        Task {
             await performGetUser()
         }
     }
-    
+
     @objc private func updateUserButtonTapped() {
-        _Concurrency.Task {
+        Task {
             await performUpdateUser()
         }
     }
@@ -356,7 +356,7 @@ public final class WelcomeViewController_Network: BaseViewController {
         
         alert.addAction(UIAlertAction(title: "취소", style: .cancel))
         alert.addAction(UIAlertAction(title: "탈퇴", style: .destructive) { [weak self] _ in
-            _Concurrency.Task {
+            Task {
                 await self?.performDeleteUser()
             }
         })
