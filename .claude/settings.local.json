@@ -21,7 +21,8 @@
       "Bash(fi)",
       "Read(//Users/imyeongjin/Library/Developer/Xcode/DerivedData/**)",
       "Bash(xargs cat:*)",
-      "Bash(xcrun simctl:*)"
+      "Bash(xcrun simctl:*)",
+      "Bash(mkdir -p /Users/imyeongjin/Desktop/SOPT-Seminar/Seminar04/Derived/Sources)"
     ],
     "deny": [],
     "ask": []
