@@ -4,7 +4,7 @@ import UIKit
 import Seminar01
 #elseif SEMINAR02 || SEMINAR02_CLOSURE
 import Seminar02
-#elseif SEMINAR03 || SEMINAR03_MVC || SEMINAR03_CHATLIST || SEMINAR03_CVC || SEMINAR03_DIFFABLE
+#elseif SEMINAR03 || SEMINAR03_MVC || SEMINAR03_CHATLIST || SEMINAR03_CVC || SEMINAR03_DIFFABLE || SEMINAR03_BAEMIN
 import Seminar03
 #elseif SEMINAR04
 import Seminar04
@@ -48,6 +48,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         rootViewController = FeedViewController()
         #elseif SEMINAR03_DIFFABLE
         rootViewController = DiffableViewController()
+        #elseif SEMINAR03_BAEMIN
+        rootViewController = BaeminTabBarController()
         #elseif SEMINAR04
         rootViewController = BasicNetworkViewController()  // 기본 네트워크 학습용
         #elseif SEMINAR05
@@ -62,7 +64,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         rootViewController = DefaultViewController()
         #endif
 
+        #if SEMINAR03_BAEMIN
+        window?.rootViewController = rootViewController
+        #else
         window?.rootViewController = UINavigationController(rootViewController: rootViewController)
+        #endif
         window?.makeKeyAndVisible()
     }
 }

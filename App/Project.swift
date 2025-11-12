@@ -83,6 +83,15 @@ let project = Project(
             )
         ),
         .scheme(
+            name: "Seminar03Baemin",
+            shared: true,
+            buildAction: .buildAction(targets: ["App"]),
+            runAction: .runAction(
+                configuration: .configuration("Seminar03Baemin"),
+                executable: "App"
+            )
+        ),
+        .scheme(
             name: "Seminar04",
             shared: true,
             buildAction: .buildAction(targets: ["App"]),
