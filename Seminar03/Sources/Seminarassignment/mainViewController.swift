@@ -65,13 +65,19 @@ public final class MainViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(SearchBarCell.self)
+        collectionView.register(BannerCell.self)
     }
 
     // MARK: - Data Setup
 
     private func setupSections() {
         sections = [
-            .searchBar
+            .searchBar,
+            .banner(BannerItem(
+                title: "B마트🎱",
+                subtitle: "전상품 쿠폰팩 + 60%특가",
+                backgroundColor: "#A0E7E5"
+            ))
         ]
     }
 }
@@ -109,9 +115,10 @@ extension MainViewController: UICollectionViewDataSource {
         case .searchBar:
             return collectionView.dequeueReusableCell(SearchBarCell.self, for: indexPath)
 
-        case .banner:
-            // TODO: 나중에 BannerCell 구현
-            return UICollectionViewCell()
+        case .banner(let item):
+            let cell = collectionView.dequeueReusableCell(BannerCell.self, for: indexPath)
+            cell.configure(with: item)
+            return cell
 
         case .categoryGrid:
             // TODO: 나중에 CategoryCell 구현
