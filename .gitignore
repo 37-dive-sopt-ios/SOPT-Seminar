@@ -147,5 +147,8 @@ Tuist/Automation/Derived/
 Tuist/.build/
 *.tuist-cache
 
+# Tuist - 각 모듈의 Derived 폴더 (자동 생성 파일)
+**/Derived/
+
 # Secrets - 민감한 정보가 포함된 파일
 Seminar04/Sources/Network/API/UserAPI.swift
