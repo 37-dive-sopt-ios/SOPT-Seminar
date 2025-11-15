@@ -16,8 +16,8 @@
 ## 📚 Tech Stack
 
 - **언어**: Swift 5.9+
-- **프레임워크**: UIKit
-- **레이아웃**: SnapKit 5.7+
+- **프레임워크**: UIKit, SwiftUI (Seminar05부터)
+- **레이아웃**: SnapKit 5.7+ (UIKit), Native SwiftUI Layout (SwiftUI)
 - **프로젝트 관리**: Tuist
 - **의존성**: Swift Package Manager
 
@@ -426,7 +426,7 @@ class ExampleView: UIView {
 }
 ```
 
-## 🚫 절대 금지 사항
+## 🚫 절대 금지 사항 (UIKit)
 
 1. `setup~` 메서드명 (예: setupUI) → `set~` 사용
 2. `NSLayoutConstraint.activate` → SnapKit 사용
@@ -435,6 +435,135 @@ class ExampleView: UIView {
 5. UIViewController에서 UI 컴포넌트를 별도 정의 없이 viewDidLoad에서 직접 생성
 6. 이모지 사용 (사용자 명시 요청 시에만)
 7. 스킴/모듈 추가 시 `TUIST_WORKFLOW_GUIDE.md` 읽지 않기
+
+---
+
+## 🎨 SwiftUI 코드 작성 규칙 (Seminar05+)
+
+### ✅ SwiftUI View 필수 구조
+
+모든 SwiftUI View는 다음 구조를 따릅니다:
+
+```swift
+import SwiftUI
+
+struct LoginView: View {
+
+    // MARK: - Properties
+    @State private var username: String = ""
+    @State private var password: String = ""
+    @State private var isNavigating: Bool = false
+
+    // MARK: - Body
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 20) {
+                // UI Components
+            }
+            .navigationDestination(isPresented: $isNavigating) {
+                WelcomeView(username: username)
+            }
+        }
+    }
+
+    // MARK: - View Components
+    private var titleView: some View {
+        Text("타이틀")
+            .font(.title)
+            .foregroundColor(.black)
+    }
+
+    // MARK: - Actions
+    private func loginAction() {
+        // 로직 처리
+        isNavigating = true
+    }
+}
+```
+
+### SwiftUI 핵심 규칙
+
+1. **struct로 선언** - SwiftUI View는 항상 struct로 선언
+2. **View 프로토콜 준수** - `View` 프로토콜 필수 구현
+3. **body 프로퍼티** - `var body: some View` 필수
+4. **Property Wrappers**:
+   - `@State`: View 내부 상태 관리
+   - `@Binding`: 부모-자식 간 데이터 바인딩
+   - `@StateObject`, `@ObservedObject`: 객체 관찰
+5. **MARK 주석**:
+   - `// MARK: - Properties`: 상태 및 프로퍼티
+   - `// MARK: - Body`: body 프로퍼티
+   - `// MARK: - View Components`: 재사용 가능한 뷰 컴포넌트
+   - `// MARK: - Actions`: 액션 메서드
+
+### SwiftUI 네비게이션
+
+**NavigationStack 사용 (iOS 16+)**:
+```swift
+@State private var isNavigating: Bool = false
+
+NavigationStack {
+    VStack {
+        Button("다음") {
+            isNavigating = true
+        }
+    }
+    .navigationDestination(isPresented: $isNavigating) {
+        NextView()
+    }
+}
+```
+
+### SwiftUI 레이아웃
+
+**Stack 기반 레이아웃**:
+```swift
+VStack(spacing: 20) {  // 수직
+    Text("제목")
+    HStack(spacing: 10) {  // 수평
+        Image(systemName: "person")
+        Text("사용자")
+    }
+    ZStack {  // 겹침
+        Rectangle()
+        Text("오버레이")
+    }
+}
+.padding()
+```
+
+### SwiftUI와 UIKit 통합
+
+**UIHostingController로 SwiftUI를 UIKit에 통합**:
+```swift
+// SceneDelegate.swift
+#if SEMINAR05
+import SwiftUI
+import Seminar05
+
+let swiftUIView = LoginView_SwiftUI()
+rootViewController = UIHostingController(rootView: swiftUIView)
+#endif
+```
+
+### SwiftUI 스타일링
+
+```swift
+Text("제목")
+    .font(.system(size: 18, weight: .bold))
+    .foregroundColor(.black)
+    .padding()
+    .background(Color.orange)
+    .cornerRadius(8)
+```
+
+## 🚫 절대 금지 사항 (SwiftUI)
+
+1. class로 View 선언 → struct 사용
+2. UIKit의 setUI/setHierarchy/setLayout 패턴 사용 금지
+3. SnapKit 사용 금지 → SwiftUI native layout 사용
+4. @State를 var로 선언 → @State private var 사용
+5. 이모지 사용 (사용자 명시 요청 시에만)
 
 ---
 

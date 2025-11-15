@@ -1,5 +1,9 @@
 import UIKit
 
+#if SEMINAR05
+import SwiftUI
+#endif
+
 #if SEMINAR01
 import Seminar01
 #elseif SEMINAR02 || SEMINAR02_CLOSURE
@@ -53,7 +57,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         #elseif SEMINAR04
         rootViewController = BasicNetworkViewController()  // 기본 네트워크 학습용
         #elseif SEMINAR05
-        rootViewController = Seminar05ViewController()
+        // SwiftUI View를 UIHostingController로 래핑
+        let swiftUIView = LoginView_SwiftUI()
+        rootViewController = UIHostingController(rootView: swiftUIView)
         #elseif SEMINAR06
         rootViewController = Seminar06ViewController()
         #elseif SEMINAR07

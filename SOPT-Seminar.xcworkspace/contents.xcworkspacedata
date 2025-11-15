@@ -19,6 +19,9 @@
    <FileRef
       location = "group:Seminar04/Seminar04.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Seminar05/Seminar05.xcodeproj">
+   </FileRef>
    <Group
       location = "container:"
       name = "Dependencies">

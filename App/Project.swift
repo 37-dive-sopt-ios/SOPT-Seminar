@@ -33,7 +33,8 @@ let project = Project(
                 .project(target: "Seminar01", path: "../Seminar01"),
                 .project(target: "Seminar02", path: "../Seminar02"),
                 .project(target: "Seminar03", path: "../Seminar03"),
-                .project(target: "Seminar04", path: "../Seminar04")
+                .project(target: "Seminar04", path: "../Seminar04"),
+                .project(target: "Seminar05", path: "../Seminar05")
             ],
             settings: .settings(
                 base: [:],
@@ -99,6 +100,7 @@ let project = Project(
                 configuration: .configuration("Seminar04"),
                 executable: "App"
             )
-        )
+        ),
+        createSeminarScheme(number: 5)
     ]
 )
