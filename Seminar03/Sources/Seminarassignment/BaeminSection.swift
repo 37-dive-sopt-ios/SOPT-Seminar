@@ -12,6 +12,8 @@ import Foundation
 enum BaeminSection {
     case searchBar
     case banner(BannerItem)
+    case tabBar
+    case pagingContent([PageContent])
     case categoryGrid([CategoryItem])
     case actionButton(ActionButtonItem)
     case brandRow([BrandItem])
@@ -23,6 +25,12 @@ struct BannerItem {
     let title: String
     let subtitle: String
     let backgroundColor: String
+}
+
+struct PageContent {
+    let categories: [(title: String, iconName: String)]
+    let hasMoreButton: Bool
+    let moreButtonTitle: String
 }
 
 struct CategoryItem {

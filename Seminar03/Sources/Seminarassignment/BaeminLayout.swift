@@ -11,12 +11,19 @@ struct BaeminLayout {
 
     // MARK: - Main Layout
 
-    static func createLayout(for sections: [BaeminSection]) -> UICollectionViewLayout {
+    static func createLayout(
+        for sections: [BaeminSection],
+        onPagingScroll: @escaping (CGFloat) -> Void
+    ) -> UICollectionViewLayout {
         return UICollectionViewCompositionalLayout { sectionIndex, environment in
             guard sectionIndex < sections.count else { return nil }
 
             let section = sections[sectionIndex]
-            return createSection(for: section, environment: environment)
+            return createSection(
+                for: section,
+                environment: environment,
+                onPagingScroll: onPagingScroll
+            )
         }
     }
 
@@ -24,13 +31,21 @@ struct BaeminLayout {
 
     private static func createSection(
         for sectionType: BaeminSection,
-        environment: NSCollectionLayoutEnvironment
+        environment: NSCollectionLayoutEnvironment,
+        onPagingScroll: @escaping (CGFloat) -> Void
     ) -> NSCollectionLayoutSection {
         switch sectionType {
         case .searchBar:
             return createSearchBarSection()
         case .banner:
             return createBannerSection()
+        case .tabBar:
+            return createTabBarSection()
+        case .pagingContent:
+            return createPagingContentSection(
+                environment: environment,
+                onPagingScroll: onPagingScroll
+            )
         case .categoryGrid:
             return createCategoryGridSection()
         case .actionButton:
@@ -59,6 +74,65 @@ struct BaeminLayout {
         )
 
         let section = NSCollectionLayoutSection(group: group)
+        return section
+    }
+
+    // MARK: - Tab Bar Section
+
+    private static func createTabBarSection() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(49)
+        )
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(49)
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: groupSize,
+            subitems: [item]
+        )
+
+        let section = NSCollectionLayoutSection(group: group)
+        return section
+    }
+
+    // MARK: - Paging Content Section
+
+    private static func createPagingContentSection(
+        environment: NSCollectionLayoutEnvironment,
+        onPagingScroll: @escaping (CGFloat) -> Void
+    ) -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(250)
+        )
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(250)
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: groupSize,
+            subitems: [item]
+        )
+
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .groupPaging
+
+        // 실시간 스크롤 추적
+        section.visibleItemsInvalidationHandler = { visibleItems, contentOffset, environment in
+            let containerWidth = environment.container.contentSize.width
+            guard containerWidth > 0 else { return }
+
+            // 스크롤 진행률 계산 (0.0 ~ 페이지수)
+            let scrollProgress = contentOffset.x / containerWidth
+            onPagingScroll(scrollProgress)
+        }
+
         return section
     }
 

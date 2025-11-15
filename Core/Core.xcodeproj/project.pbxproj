@@ -15,6 +15,7 @@
 		689F058A350FA3DC343A22D2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F2FFC5C1DB9FB155C2A9A /* BaseViewController.swift */; };
 		9AC51DD6F07FA18F27753A5F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4537821D7BBA0A034DE2F /* UIView+.swift */; };
 		A4D2375753CC473776B08295 /* LoadingIndicatorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327C604FDA55B25BA91CAAB /* LoadingIndicatorable.swift */; };
+		A862B215981CE5D5BE27129B /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 9B921246ADA3EE4C494CEC9D /* .gitkeep */; };
 		CE509CB5E0098A61D2890A77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EDB7529BF1D393246B34539 /* Assets.xcassets */; };
 		EB227C514939279184AEBE36 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA4D27A43B0854CBBD6E5 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		2CDB36601BB7E1FAB381357B /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		56E4537821D7BBA0A034DE2F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		7AA0261276659150B33CDA93 /* TuistAssets+Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Core.swift"; sourceTree = "<group>"; };
+		9B921246ADA3EE4C494CEC9D /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		C0AA284D46F06DE7F69A1C1A /* TuistBundle+Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Core.swift"; sourceTree = "<group>"; };
 		CB2F2FFC5C1DB9FB155C2A9A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D327C604FDA55B25BA91CAAB /* LoadingIndicatorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorable.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		398DDE8FB7FF757B796B9A2B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FDA578186F3AFC51EC7A6620 /* Fonts */,
 				0EDB7529BF1D393246B34539 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -94,8 +97,8 @@
 		62824534F75515F48E8114A7 = {
 			isa = PBXGroup;
 			children = (
-				250C62EE12DB56ECEBB473C3 /* Products */,
 				E12816BA35F79D21E0D77318 /* Project */,
+				250C62EE12DB56ECEBB473C3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +159,14 @@
 			path = Derived;
 			sourceTree = "<group>";
 		};
+		FDA578186F3AFC51EC7A6620 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9B921246ADA3EE4C494CEC9D /* .gitkeep */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,8 +197,6 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 4EBE82DE9849E8F47BAECD7B /* Build configuration list for PBXProject "Core" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -213,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE509CB5E0098A61D2890A77 /* Assets.xcassets in Resources */,
+				A862B215981CE5D5BE27129B /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1370,7 +1380,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

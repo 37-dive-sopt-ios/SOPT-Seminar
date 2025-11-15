@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1083F6E662E658C4918E492E /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = D86C39649F6B904AE8899C3C /* .gitkeep */; };
 		323D2B28819C4C70EA97FC02 /* LoginViewController_AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4A49C08085CC0284878DE7 /* LoginViewController_AutoLayout.swift */; };
 		3C4E94D2B17E0E8B03DEC427 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8B2E37F36C0FF97BE9151E /* SnapKit.framework */; };
 		43A0B01FBA31F442562312C5 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F779C0EF1A9D58E8EF8EBF /* Core.framework */; };
@@ -41,6 +42,7 @@
 		BD4E560D29D9A332A30DA31F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BE3A6DF3CC4FA5DEE61E3E11 /* TuistBundle+Seminar01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Seminar01.swift"; sourceTree = "<group>"; };
 		C3F779C0EF1A9D58E8EF8EBF /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D86C39649F6B904AE8899C3C /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		EE8B2E37F36C0FF97BE9151E /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12EA85EEB75F9CBCD2F3325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 		87C8ADA9516DCB4DD40AE424 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D86C39649F6B904AE8899C3C /* .gitkeep */,
 				F12EA85EEB75F9CBCD2F3325 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -126,8 +129,8 @@
 		D31FA2DB296CD8206D30CD5E = {
 			isa = PBXGroup;
 			children = (
-				8D3A70EB54EAE0850367DF1A /* Products */,
 				6E88EFD59CE6AF20EAA5ECF9 /* Project */,
+				8D3A70EB54EAE0850367DF1A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,8 +172,6 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 81D82AB1E090863B1C401FE5 /* Build configuration list for PBXProject "Seminar01" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -195,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1083F6E662E658C4918E492E /* .gitkeep in Resources */,
 				90697FE15C5341AE0FCFDBF1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -966,7 +968,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
