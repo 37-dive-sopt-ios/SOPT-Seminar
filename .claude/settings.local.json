@@ -22,7 +22,10 @@
       "Read(//Users/imyeongjin/Library/Developer/Xcode/DerivedData/**)",
       "Bash(xargs cat:*)",
       "Bash(xcrun simctl:*)",
-      "Bash(mkdir -p /Users/imyeongjin/Desktop/SOPT-Seminar/Seminar04/Derived/Sources)"
+      "Bash(mkdir -p /Users/imyeongjin/Desktop/SOPT-Seminar/Seminar04/Derived/Sources)",
+      "Bash(git rm:*)",
+      "Bash(xargs git rm --cached)",
+      "Bash(xargs -I {} git rm --cached {})"
     ],
     "deny": [],
     "ask": []
