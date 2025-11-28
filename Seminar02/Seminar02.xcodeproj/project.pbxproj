@@ -137,8 +137,8 @@
 		59258AD0C3D19AC973D3F6EA = {
 			isa = PBXGroup;
 			children = (
-				CA965ABA6447B87B66502B5E /* Products */,
 				D2657F028875964F9D290DA5 /* Project */,
+				CA965ABA6447B87B66502B5E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -554,7 +554,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
