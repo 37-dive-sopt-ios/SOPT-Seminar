@@ -132,7 +132,7 @@ public final class BasicNetworkViewController: BaseViewController {
 
     private func setUI() {
         view.backgroundColor = .white
-        title = "Basic Network (Service 분리)"
+        title = "Basic Network [서버 실습 주소 닫음]"
     }
 
     private func setHierarchy() {
