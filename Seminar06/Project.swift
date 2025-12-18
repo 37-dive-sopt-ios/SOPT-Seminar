@@ -2,7 +2,7 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project.framework(
-    name: "Seminar05",
+    name: "Seminar06",
     dependencies: [
         .project(target: "Core", path: "../Core")
     ]

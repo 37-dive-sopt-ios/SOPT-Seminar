@@ -1,8 +1,8 @@
 //
 //  WelcomeView_SwiftUI.swift
-//  Seminar05
+//  Seminar06
 //
-//  Created by Claude on 11/15/25.
+//  Created by 이명진 on 11/15/25.
 //
 
 import SwiftUI

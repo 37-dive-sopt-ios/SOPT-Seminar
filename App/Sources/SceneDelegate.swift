@@ -1,6 +1,6 @@
 import UIKit
 
-#if SEMINAR05 || SEMINAR07
+#if SEMINAR06 || SEMINAR07
 import SwiftUI
 #endif
 
@@ -12,8 +12,6 @@ import Seminar02
 import Seminar03
 #elseif SEMINAR04
 import Seminar04
-#elseif SEMINAR05
-import Seminar05
 #elseif SEMINAR06
 import Seminar06
 #elseif SEMINAR07
@@ -56,12 +54,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         rootViewController = BaeminTabBarController()
         #elseif SEMINAR04
         rootViewController = BasicNetworkViewController()  // 기본 네트워크 학습용
-        #elseif SEMINAR05
+        #elseif SEMINAR06
         // SwiftUI View를 UIHostingController로 래핑
         let swiftUIView = LoginView_SwiftUI()
         rootViewController = UIHostingController(rootView: swiftUIView)
-        #elseif SEMINAR06
-        rootViewController = Seminar06ViewController()
         #elseif SEMINAR07
         let swiftUINavigationView = DestinationView()
         rootViewController = UIHostingController(rootView: swiftUINavigationView)

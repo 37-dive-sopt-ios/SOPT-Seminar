@@ -34,7 +34,7 @@ let project = Project(
                 .project(target: "Seminar02", path: "../Seminar02"),
                 .project(target: "Seminar03", path: "../Seminar03"),
                 .project(target: "Seminar04", path: "../Seminar04"),
-                .project(target: "Seminar05", path: "../Seminar05"),
+                .project(target: "Seminar06", path: "../Seminar06"),
                 .project(target: "Seminar07", path: "../Seminar07")
             ],
             settings: .settings(
@@ -102,7 +102,7 @@ let project = Project(
                 executable: "App"
             )
         ),
-        createSeminarScheme(number: 5),
+        createSeminarScheme(number: 6),
         createSeminarScheme(number: 7)
     ]
 )
