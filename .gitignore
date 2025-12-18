@@ -147,11 +147,10 @@ Tuist/Automation/Derived/
 Tuist/.build/
 *.tuist-cache
 
-# Tuist - 자동 생성 파일들 (tuist generate로 생성됨)
+# Tuist - 자동 생성 파일들 (tuist generate로 재생성 가능)
 **/Derived/
-*.xcodeproj/project.pbxproj
-*.xcworkspace/contents.xcworkspacedata
-*.xcworkspace/xcshareddata/
+**/*.xcodeproj/
+**/*.xcworkspace/
 
 # Secrets - 민감한 정보가 포함된 파일
 Seminar04/Sources/Network/API/UserAPI.swift
