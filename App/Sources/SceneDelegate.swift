@@ -1,6 +1,6 @@
 import UIKit
 
-#if SEMINAR05
+#if SEMINAR05 || SEMINAR07
 import SwiftUI
 #endif
 
@@ -63,7 +63,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         #elseif SEMINAR06
         rootViewController = Seminar06ViewController()
         #elseif SEMINAR07
-        rootViewController = Seminar07ViewController()
+        let swiftUINavigationView = DestinationView()
+        rootViewController = UIHostingController(rootView: swiftUINavigationView)
         #elseif SEMINAR08
         rootViewController = Seminar08ViewController()
         #else

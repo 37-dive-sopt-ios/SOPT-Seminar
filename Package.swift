@@ -22,6 +22,7 @@ import PackageDescription
                 .debug(name: "Seminar03Baemin"),
                 .debug(name: "Seminar04"),
                 .debug(name: "Seminar05"),
+                .debug(name: "Seminar07"),
                 .debug(name: "Debug"),
                 .release(name: "Release")
             ]
