@@ -7,8 +7,9 @@
 
 import UIKit
 
-/// - POP(Protocol Oriented Programming) 적용
-open class BaseViewController: UIViewController, Alertable, LoadingIndicatorable {
+typealias RequiredViewControllerProtocol = Alertable & LoadingIndicatorable
+
+open class BaseViewController: UIViewController, RequiredViewControllerProtocol {
     
     // MARK: - UI Components
     
