@@ -9,19 +9,33 @@ import SwiftUI
 
 // MARK: - ChatRoomModel
 
-struct ChatRoomModel: Identifiable {
-    let id = UUID()
-    let profileImage: Image?
-    let name: String
-    let location: String
-    let lastMessage: String
-    let thumbnail: Image?
+public struct ChatRoomModel: Identifiable {
+    public let id = UUID()
+    public let profileImage: Image?
+    public let name: String
+    public let location: String
+    public let lastMessage: String
+    public let thumbnail: Image?
+    
+    public init(
+        profileImage: Image?,
+        name: String,
+        location: String,
+        lastMessage: String,
+        thumbnail: Image?
+    ) {
+        self.profileImage = profileImage
+        self.name = name
+        self.location = location
+        self.lastMessage = lastMessage
+        self.thumbnail = thumbnail
+    }
 }
 
 // MARK: - Mock Data
 
 extension ChatRoomModel {
-    static let mockData: [ChatRoomModel] = [
+    public static let mockData: [ChatRoomModel] = [
         ChatRoomModel(
             profileImage: nil,
             name: "이명진",
