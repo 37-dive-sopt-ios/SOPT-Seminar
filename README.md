@@ -1,12 +1,13 @@
-# 37기 iOS 파트 세미나 실습 코드 모음집 입니다.
+# 37기 iOS 파트 세미나 실습 코드
 <img width="1564" height="280" alt="이명진배너" src="https://github.com/user-attachments/assets/60e447c9-cd1d-493c-bf60-b812141e91b9" />
 
 ## 시작하기
 
 ### 요구사항
 
-- Xcode 15.0+
-- Tuist 4.0+
+- Xcode 26.0+
+- iOS 26.0+
+- Tuist 4.50.2
 
 ### Tuist 설치
 
